@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\SP_PC.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\ar.exe cr CMakeFiles\SP_PC.dir/objects.a @CMakeFiles\SP_PC.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE -Wall -g -Wl,--whole-archive CMakeFiles\SP_PC.dir/objects.a -Wl,--no-whole-archive -o SP_PC.exe -Wl,--out-implib,libSP_PC.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\SP_PC.dir\linklibs.rsp

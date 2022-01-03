@@ -1,0 +1,37 @@
+[
+{
+  "directory": "C:/Users/pshev/git/PC_SP/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\main.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\main.c",
+  "file": "C:/Users/pshev/git/PC_SP/src/main.c"
+},
+{
+  "directory": "C:/Users/pshev/git/PC_SP/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\parameters.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\parameters.c",
+  "file": "C:/Users/pshev/git/PC_SP/src/parameters.c"
+},
+{
+  "directory": "C:/Users/pshev/git/PC_SP/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\ford_fulkerson.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\ford_fulkerson.c",
+  "file": "C:/Users/pshev/git/PC_SP/src/ford_fulkerson.c"
+},
+{
+  "directory": "C:/Users/pshev/git/PC_SP/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\loader.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\loader.c",
+  "file": "C:/Users/pshev/git/PC_SP/src/loader.c"
+},
+{
+  "directory": "C:/Users/pshev/git/PC_SP/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\vector.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\vector.c",
+  "file": "C:/Users/pshev/git/PC_SP/src/vector.c"
+},
+{
+  "directory": "C:/Users/pshev/git/PC_SP/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\node.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\node.c",
+  "file": "C:/Users/pshev/git/PC_SP/src/node.c"
+},
+{
+  "directory": "C:/Users/pshev/git/PC_SP/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\edge.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\edge.c",
+  "file": "C:/Users/pshev/git/PC_SP/src/edge.c"
+}
+]
