@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = C:\Users\pshev\git\PC_SP\build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/SP_PC.dir/all
+all: CMakeFiles/PC_SP.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -70,34 +70,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/SP_PC.dir/clean
+clean: CMakeFiles/PC_SP.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/SP_PC.dir
+# Target rules for target CMakeFiles/PC_SP.dir
 
 # All Build rule for target.
-CMakeFiles/SP_PC.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target SP_PC"
-.PHONY : CMakeFiles/SP_PC.dir/all
+CMakeFiles/PC_SP.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target PC_SP"
+.PHONY : CMakeFiles/PC_SP.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SP_PC.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pshev\git\PC_SP\build\CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/SP_PC.dir/all
+CMakeFiles/PC_SP.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pshev\git\PC_SP\build\CMakeFiles 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/PC_SP.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pshev\git\PC_SP\build\CMakeFiles 0
-.PHONY : CMakeFiles/SP_PC.dir/rule
+.PHONY : CMakeFiles/PC_SP.dir/rule
 
 # Convenience name for target.
-SP_PC: CMakeFiles/SP_PC.dir/rule
-.PHONY : SP_PC
+PC_SP: CMakeFiles/PC_SP.dir/rule
+.PHONY : PC_SP
 
 # clean rule for target.
-CMakeFiles/SP_PC.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/clean
-.PHONY : CMakeFiles/SP_PC.dir/clean
+CMakeFiles/PC_SP.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/clean
+.PHONY : CMakeFiles/PC_SP.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -18,8 +18,8 @@ edge_t *edge_create(const int id, const int source, const int target, const int 
         free(new);
         return NULL;
     }
+   
     strcpy(new->wkt, wkt);
-
     new->id = id;
     new->source = source;
     new->target = target;
@@ -32,9 +32,11 @@ edge_t *edge_create(const int id, const int source, const int target, const int 
 
 
 void edge_destroy(edge_t **poor) {
+    
     if (!poor || !*poor) {
         return;
     }
+    
     (*poor)->id = 0;
     (*poor)->source = 0;
     (*poor)->target = 0;
@@ -43,17 +45,7 @@ void edge_destroy(edge_t **poor) {
     (*poor)->flow = 0;
     free((*poor)->wkt);    
     (*poor)->wkt = NULL;
-
     free(*poor); 
     *poor = NULL;
 }
 
-void edge_print(const edge_t *edge) {
-    
-    if (!edge) {
-        printf("ERROR empty pointer");
-        return;
-    }
-    
-    printf("(%d: %d, %d, %d, %d, %s)\n", edge->id, edge->source, edge->target, edge->capacity, edge->is_valid, edge->wkt);
-}

@@ -5,20 +5,21 @@
 #include "parameters.h"
 #include "loader.h"
 #include "ford_fulkerson.h"
+#include "out_file.h"
 
-
-
+/**
+ * @brief 
+ * 
+ * @param argc 
+ * @param argv 
+ * @return int 
+ */
 int main(int argc, char *argv[]) {
-    int exit;
+    int exit, max_flow;
     
-    parameters_procesing(argc, argv);
-    printf("argument vertex %s\n", node_path);
-    printf("argument edge %s\n", edge_path);
-    printf("source %d\n", source_id);
-    printf("target %d\n", target_id);
-    printf("is valid %d\n", is_valid);
-
+    parameters_processing(argc, argv);
     exit = 0;
+
     exit = node_loader(node_path);
     if(exit){
         return exit;
@@ -38,8 +39,19 @@ int main(int argc, char *argv[]) {
     if(exit){
         return exit;
     }
-    
-    printf("Max flow: %d", ford_fulkerson(source_id, target_id));
 
-    return EXIT_SUCCESS;
+    max_flow = ford_fulkerson(source_id, target_id);
+    if(!max_flow){
+        return EXIT_FAILURE_NO_FLOW;
+    }
+
+    exit = out_write(out_path);
+    if(exit){
+        return exit;
+    }
+    
+    printf("Max network flow is |x| = %d", max_flow);
+
+    vector_destroy(&nodes);
+    return exit;
 }

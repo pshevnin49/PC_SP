@@ -22,7 +22,10 @@ CMakeFiles/SP_PC.dir/src/main.c.obj: C:\Users\pshev\git\PC_SP\src\main.c \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
  C:\Users\pshev\git\PC_SP\src\parameters.h \
  C:\Users\pshev\git\PC_SP\src\loader.h \
+ C:\Users\pshev\git\PC_SP\src\edge.h C:\Users\pshev\git\PC_SP\src\node.h \
  C:\Users\pshev\git\PC_SP\src\vector.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stddef.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/x86_64-w64-mingw32/include/stddef.h \
- C:\Users\pshev\git\PC_SP\src\ford_fulkerson.h
+ C:\Users\pshev\git\PC_SP\src\ford_fulkerson.h \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/x86_64-w64-mingw32/include/math.h \
+ C:\Users\pshev\git\PC_SP\src\out_file.h

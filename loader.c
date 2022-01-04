@@ -1,11 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
 
-#include "edge.h"
-#include "node.h"
-#include "vector.h"
 #include "loader.h"
-#include "parameters.h"
 
 vector_t *indexes;
 vector_t *nodes;
@@ -25,7 +19,7 @@ int node_format_check(char *node_format){
 }
 
 int edge_to_node(edge_t *edge){
-    int i;
+    int a;
     int source; 
     node_t *node_new;
     if(!edge){
@@ -36,8 +30,8 @@ int edge_to_node(edge_t *edge){
     }
     source = edge->source;
    
-    for(i = 0; nodes->count; ++i){
-        node_new = *(node_t **)vector_at(nodes, i);
+    for(a = 0; nodes->count; ++a){
+        node_new = *(node_t **)vector_at(nodes, a);
         if(source == 43){
             printf("source = 43\n");
         }
@@ -49,15 +43,14 @@ int edge_to_node(edge_t *edge){
     return 1;
 }
 
-
 int is_dublicate(int id){
-    int i;
+    size_t a;
     if(!indexes){
         return 0;
     }
     if(indexes){
-        for(i = 0; i < vector_count(indexes); ++i){
-            if(id == *(int *)vector_at(indexes, i)){
+        for(a = 0; a < vector_count(indexes); ++a){
+            if(id == *(int *)vector_at(indexes, a)){
                 return 1;
             }
         }
@@ -70,7 +63,6 @@ int node_loader(char *path) {
     char line[NODE_CHAR_BUFFER_SIZE] = { 0 }, *wkt;
     int node_id; 
     char *symbols_arr;
-    size_t i; 
     node_t *node;
     
     #define clean_and_exit()        \
@@ -79,13 +71,13 @@ int node_loader(char *path) {
         return EXIT_FAILURE_VERTEX;               
         
     if(!path){
-        printf("Invalid vertex file.\n");
+        printf("Invalid vertex file.1\n");
         clean_and_exit();
     }
 
     file = fopen(path, "r");
     if (!file) {
-        printf("Invalid vertex file.\n");
+        printf("Invalid vertex file.2\n");
         clean_and_exit();
     }
     
@@ -103,7 +95,7 @@ int node_loader(char *path) {
     
     fgets(line, NODE_CHAR_BUFFER_SIZE, file);
     if(node_format_check(line)){
-        printf("Invalid vertex file.\n");
+        printf("Invalid vertex file.3\n");
         clean_and_exit();
     }
    
@@ -130,9 +122,6 @@ int node_loader(char *path) {
         vector_push_back(nodes, &node);
     }
     
-    /*for(i = 0; i < nodes->count; ++i){ 
-        node_print(*(node_t **)vector_at(nodes, i)); 
-    } */
     vector_destroy(&indexes);
     fclose(file);
     #undef clean_and_exit
@@ -144,7 +133,6 @@ int edge_loader(char *path, int is_valid) {
     char line[EDGE_CHAR_BUFFER_SIZE] = { 0 }, *wkt;
     int edge_id, edge_src, edge_trg, edge_cpct, edge_valid;
     char *symbols_arr;
-    size_t i; 
     vector_t *edges;
     edge_t *edge;
 
@@ -180,7 +168,7 @@ int edge_loader(char *path, int is_valid) {
         clean_and_exit();
     }
 
-    while (fgets(line, EDGE_CHAR_BUFFER_SIZE, file)) {
+    while(fgets(line, EDGE_CHAR_BUFFER_SIZE, file)) {
         if (strlen(line) <= 1) {
             continue;
         }
@@ -215,7 +203,7 @@ int edge_loader(char *path, int is_valid) {
             
         }
         
-        wkt = strtok(NULL, EDGE_CSV_DELIMETER_WKT);
+        wkt = strtok(NULL, EDGE_CSV_DELIMETER);
         wkt[strcspn(wkt, "\r\n")] = 0;
         edge = edge_create(edge_id, edge_src, edge_trg, edge_cpct, edge_valid, wkt);
 
@@ -230,21 +218,16 @@ int edge_loader(char *path, int is_valid) {
         
     }
 
-    /*for(i = 0; i < nodes->count; ++i){ 
-        node_print(*(node_t **)vector_at(nodes, i)); 
-    }*/ 
-
     vector_destroy(&indexes);
     #undef clean_and_exit
     return 0;
 }
 
 int source_in_graph(int source){
-    int i;
+    size_t a;
     
-    for(i = 0; i < nodes->count; ++i){
-        
-        if((*(node_t **)vector_at(nodes, i))->id == source){
+    for(a = 0; a < nodes->count; ++a){
+        if((*(node_t **)vector_at(nodes, a))->id == source){
             return 0;
         }
     }
@@ -253,10 +236,10 @@ int source_in_graph(int source){
 }
 
 int target_in_graph(int target){
-    int i;
+    size_t a;
     
-    for(i = 0; i < nodes->count; ++i){
-        if((*(node_t **)vector_at(nodes, i))->id == target){
+    for(a = 0; a < nodes->count; ++a){
+        if((*(node_t **)vector_at(nodes, a))->id == target){
             return 0;
         }
     }

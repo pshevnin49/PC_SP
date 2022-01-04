@@ -1,37 +1,42 @@
 [
 {
   "directory": "C:/Users/pshev/git/PC_SP/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\main.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\main.c",
-  "file": "C:/Users/pshev/git/PC_SP/src/main.c"
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -Wextra -pedantic -ansi -g -g -o CMakeFiles\\PC_SP.dir\\main.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\main.c",
+  "file": "C:/Users/pshev/git/PC_SP/main.c"
 },
 {
   "directory": "C:/Users/pshev/git/PC_SP/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\parameters.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\parameters.c",
-  "file": "C:/Users/pshev/git/PC_SP/src/parameters.c"
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -Wextra -pedantic -ansi -g -g -o CMakeFiles\\PC_SP.dir\\parameters.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\parameters.c",
+  "file": "C:/Users/pshev/git/PC_SP/parameters.c"
 },
 {
   "directory": "C:/Users/pshev/git/PC_SP/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\ford_fulkerson.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\ford_fulkerson.c",
-  "file": "C:/Users/pshev/git/PC_SP/src/ford_fulkerson.c"
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -Wextra -pedantic -ansi -g -g -o CMakeFiles\\PC_SP.dir\\out_file.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\out_file.c",
+  "file": "C:/Users/pshev/git/PC_SP/out_file.c"
 },
 {
   "directory": "C:/Users/pshev/git/PC_SP/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\loader.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\loader.c",
-  "file": "C:/Users/pshev/git/PC_SP/src/loader.c"
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -Wextra -pedantic -ansi -g -g -o CMakeFiles\\PC_SP.dir\\ford_fulkerson.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\ford_fulkerson.c",
+  "file": "C:/Users/pshev/git/PC_SP/ford_fulkerson.c"
 },
 {
   "directory": "C:/Users/pshev/git/PC_SP/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\vector.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\vector.c",
-  "file": "C:/Users/pshev/git/PC_SP/src/vector.c"
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -Wextra -pedantic -ansi -g -g -o CMakeFiles\\PC_SP.dir\\loader.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\loader.c",
+  "file": "C:/Users/pshev/git/PC_SP/loader.c"
 },
 {
   "directory": "C:/Users/pshev/git/PC_SP/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\node.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\node.c",
-  "file": "C:/Users/pshev/git/PC_SP/src/node.c"
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -Wextra -pedantic -ansi -g -g -o CMakeFiles\\PC_SP.dir\\vector.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\vector.c",
+  "file": "C:/Users/pshev/git/PC_SP/vector.c"
 },
 {
   "directory": "C:/Users/pshev/git/PC_SP/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -g -o CMakeFiles\\SP_PC.dir\\src\\edge.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\src\\edge.c",
-  "file": "C:/Users/pshev/git/PC_SP/src/edge.c"
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -Wextra -pedantic -ansi -g -g -o CMakeFiles\\PC_SP.dir\\node.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\node.c",
+  "file": "C:/Users/pshev/git/PC_SP/node.c"
+},
+{
+  "directory": "C:/Users/pshev/git/PC_SP/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -Wextra -pedantic -ansi -g -g -o CMakeFiles\\PC_SP.dir\\edge.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\edge.c",
+  "file": "C:/Users/pshev/git/PC_SP/edge.c"
 }
 ]

@@ -116,185 +116,209 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SP_PC
+# Target rules for targets named PC_SP
 
 # Build rule for target.
-SP_PC: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 SP_PC
-.PHONY : SP_PC
+PC_SP: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 PC_SP
+.PHONY : PC_SP
 
 # fast build rule for target.
-SP_PC/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/build
-.PHONY : SP_PC/fast
+PC_SP/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/build
+.PHONY : PC_SP/fast
 
-src/edge.obj: src/edge.c.obj
-.PHONY : src/edge.obj
-
-# target to build an object file
-src/edge.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/edge.c.obj
-.PHONY : src/edge.c.obj
-
-src/edge.i: src/edge.c.i
-.PHONY : src/edge.i
-
-# target to preprocess a source file
-src/edge.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/edge.c.i
-.PHONY : src/edge.c.i
-
-src/edge.s: src/edge.c.s
-.PHONY : src/edge.s
-
-# target to generate assembly for a file
-src/edge.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/edge.c.s
-.PHONY : src/edge.c.s
-
-src/ford_fulkerson.obj: src/ford_fulkerson.c.obj
-.PHONY : src/ford_fulkerson.obj
+edge.obj: edge.c.obj
+.PHONY : edge.obj
 
 # target to build an object file
-src/ford_fulkerson.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/ford_fulkerson.c.obj
-.PHONY : src/ford_fulkerson.c.obj
+edge.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/edge.c.obj
+.PHONY : edge.c.obj
 
-src/ford_fulkerson.i: src/ford_fulkerson.c.i
-.PHONY : src/ford_fulkerson.i
+edge.i: edge.c.i
+.PHONY : edge.i
 
 # target to preprocess a source file
-src/ford_fulkerson.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/ford_fulkerson.c.i
-.PHONY : src/ford_fulkerson.c.i
+edge.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/edge.c.i
+.PHONY : edge.c.i
 
-src/ford_fulkerson.s: src/ford_fulkerson.c.s
-.PHONY : src/ford_fulkerson.s
+edge.s: edge.c.s
+.PHONY : edge.s
 
 # target to generate assembly for a file
-src/ford_fulkerson.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/ford_fulkerson.c.s
-.PHONY : src/ford_fulkerson.c.s
+edge.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/edge.c.s
+.PHONY : edge.c.s
 
-src/loader.obj: src/loader.c.obj
-.PHONY : src/loader.obj
+ford_fulkerson.obj: ford_fulkerson.c.obj
+.PHONY : ford_fulkerson.obj
 
 # target to build an object file
-src/loader.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/loader.c.obj
-.PHONY : src/loader.c.obj
+ford_fulkerson.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/ford_fulkerson.c.obj
+.PHONY : ford_fulkerson.c.obj
 
-src/loader.i: src/loader.c.i
-.PHONY : src/loader.i
+ford_fulkerson.i: ford_fulkerson.c.i
+.PHONY : ford_fulkerson.i
 
 # target to preprocess a source file
-src/loader.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/loader.c.i
-.PHONY : src/loader.c.i
+ford_fulkerson.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/ford_fulkerson.c.i
+.PHONY : ford_fulkerson.c.i
 
-src/loader.s: src/loader.c.s
-.PHONY : src/loader.s
+ford_fulkerson.s: ford_fulkerson.c.s
+.PHONY : ford_fulkerson.s
 
 # target to generate assembly for a file
-src/loader.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/loader.c.s
-.PHONY : src/loader.c.s
+ford_fulkerson.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/ford_fulkerson.c.s
+.PHONY : ford_fulkerson.c.s
 
-src/main.obj: src/main.c.obj
-.PHONY : src/main.obj
+loader.obj: loader.c.obj
+.PHONY : loader.obj
 
 # target to build an object file
-src/main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/main.c.obj
-.PHONY : src/main.c.obj
+loader.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/loader.c.obj
+.PHONY : loader.c.obj
 
-src/main.i: src/main.c.i
-.PHONY : src/main.i
+loader.i: loader.c.i
+.PHONY : loader.i
 
 # target to preprocess a source file
-src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/main.c.i
-.PHONY : src/main.c.i
+loader.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/loader.c.i
+.PHONY : loader.c.i
 
-src/main.s: src/main.c.s
-.PHONY : src/main.s
+loader.s: loader.c.s
+.PHONY : loader.s
 
 # target to generate assembly for a file
-src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/main.c.s
-.PHONY : src/main.c.s
+loader.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/loader.c.s
+.PHONY : loader.c.s
 
-src/node.obj: src/node.c.obj
-.PHONY : src/node.obj
+main.obj: main.c.obj
+.PHONY : main.obj
 
 # target to build an object file
-src/node.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/node.c.obj
-.PHONY : src/node.c.obj
+main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/main.c.obj
+.PHONY : main.c.obj
 
-src/node.i: src/node.c.i
-.PHONY : src/node.i
+main.i: main.c.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/node.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/node.c.i
-.PHONY : src/node.c.i
+main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/main.c.i
+.PHONY : main.c.i
 
-src/node.s: src/node.c.s
-.PHONY : src/node.s
+main.s: main.c.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/node.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/node.c.s
-.PHONY : src/node.c.s
+main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/main.c.s
+.PHONY : main.c.s
 
-src/parameters.obj: src/parameters.c.obj
-.PHONY : src/parameters.obj
+node.obj: node.c.obj
+.PHONY : node.obj
 
 # target to build an object file
-src/parameters.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/parameters.c.obj
-.PHONY : src/parameters.c.obj
+node.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/node.c.obj
+.PHONY : node.c.obj
 
-src/parameters.i: src/parameters.c.i
-.PHONY : src/parameters.i
+node.i: node.c.i
+.PHONY : node.i
 
 # target to preprocess a source file
-src/parameters.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/parameters.c.i
-.PHONY : src/parameters.c.i
+node.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/node.c.i
+.PHONY : node.c.i
 
-src/parameters.s: src/parameters.c.s
-.PHONY : src/parameters.s
+node.s: node.c.s
+.PHONY : node.s
 
 # target to generate assembly for a file
-src/parameters.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/parameters.c.s
-.PHONY : src/parameters.c.s
+node.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/node.c.s
+.PHONY : node.c.s
 
-src/vector.obj: src/vector.c.obj
-.PHONY : src/vector.obj
+out_file.obj: out_file.c.obj
+.PHONY : out_file.obj
 
 # target to build an object file
-src/vector.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/vector.c.obj
-.PHONY : src/vector.c.obj
+out_file.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/out_file.c.obj
+.PHONY : out_file.c.obj
 
-src/vector.i: src/vector.c.i
-.PHONY : src/vector.i
+out_file.i: out_file.c.i
+.PHONY : out_file.i
 
 # target to preprocess a source file
-src/vector.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/vector.c.i
-.PHONY : src/vector.c.i
+out_file.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/out_file.c.i
+.PHONY : out_file.c.i
 
-src/vector.s: src/vector.c.s
-.PHONY : src/vector.s
+out_file.s: out_file.c.s
+.PHONY : out_file.s
 
 # target to generate assembly for a file
-src/vector.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SP_PC.dir\build.make CMakeFiles/SP_PC.dir/src/vector.c.s
-.PHONY : src/vector.c.s
+out_file.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/out_file.c.s
+.PHONY : out_file.c.s
+
+parameters.obj: parameters.c.obj
+.PHONY : parameters.obj
+
+# target to build an object file
+parameters.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/parameters.c.obj
+.PHONY : parameters.c.obj
+
+parameters.i: parameters.c.i
+.PHONY : parameters.i
+
+# target to preprocess a source file
+parameters.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/parameters.c.i
+.PHONY : parameters.c.i
+
+parameters.s: parameters.c.s
+.PHONY : parameters.s
+
+# target to generate assembly for a file
+parameters.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/parameters.c.s
+.PHONY : parameters.c.s
+
+vector.obj: vector.c.obj
+.PHONY : vector.obj
+
+# target to build an object file
+vector.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/vector.c.obj
+.PHONY : vector.c.obj
+
+vector.i: vector.c.i
+.PHONY : vector.i
+
+# target to preprocess a source file
+vector.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/vector.c.i
+.PHONY : vector.c.i
+
+vector.s: vector.c.s
+.PHONY : vector.s
+
+# target to generate assembly for a file
+vector.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/vector.c.s
+.PHONY : vector.c.s
 
 # Help Target
 help:
@@ -304,28 +328,31 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... SP_PC
-	@echo ... src/edge.obj
-	@echo ... src/edge.i
-	@echo ... src/edge.s
-	@echo ... src/ford_fulkerson.obj
-	@echo ... src/ford_fulkerson.i
-	@echo ... src/ford_fulkerson.s
-	@echo ... src/loader.obj
-	@echo ... src/loader.i
-	@echo ... src/loader.s
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
-	@echo ... src/node.obj
-	@echo ... src/node.i
-	@echo ... src/node.s
-	@echo ... src/parameters.obj
-	@echo ... src/parameters.i
-	@echo ... src/parameters.s
-	@echo ... src/vector.obj
-	@echo ... src/vector.i
-	@echo ... src/vector.s
+	@echo ... PC_SP
+	@echo ... edge.obj
+	@echo ... edge.i
+	@echo ... edge.s
+	@echo ... ford_fulkerson.obj
+	@echo ... ford_fulkerson.i
+	@echo ... ford_fulkerson.s
+	@echo ... loader.obj
+	@echo ... loader.i
+	@echo ... loader.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
+	@echo ... node.obj
+	@echo ... node.i
+	@echo ... node.s
+	@echo ... out_file.obj
+	@echo ... out_file.i
+	@echo ... out_file.s
+	@echo ... parameters.obj
+	@echo ... parameters.i
+	@echo ... parameters.s
+	@echo ... vector.obj
+	@echo ... vector.i
+	@echo ... vector.s
 .PHONY : help
 
 

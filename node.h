@@ -5,17 +5,18 @@
 #include <stdlib.h>
 #include <string.h>
 #include "vector.h"
+#include "edge.h"
 
 typedef struct _node {
     int id;
     int color;
     int pred;
     char *wkt;
-    vector_t *edges;//change
+    vector_t *edges;
 } node_t;
 
 
-node_t *node_create(const int id, const char *wkt);// vector_t is added
+node_t *node_create(const int id, const char *wkt);
 
 
 /**
@@ -24,11 +25,7 @@ node_t *node_create(const int id, const char *wkt);// vector_t is added
  */
 void node_destroy(node_t **poor);
 
-/**
- * @brief Funkce vytiskne osobu do konzole.
- * @param p Tištěná osoba.
- */
-void node_print(const node_t *node);
+
 
 #endif
 

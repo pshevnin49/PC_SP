@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/pshev/git/PC_SP/src/loader.c" "CMakeFiles/SP_PC.dir/src/loader.c.obj" "gcc" "CMakeFiles/SP_PC.dir/src/loader.c.obj.d"
   "C:/Users/pshev/git/PC_SP/src/main.c" "CMakeFiles/SP_PC.dir/src/main.c.obj" "gcc" "CMakeFiles/SP_PC.dir/src/main.c.obj.d"
   "C:/Users/pshev/git/PC_SP/src/node.c" "CMakeFiles/SP_PC.dir/src/node.c.obj" "gcc" "CMakeFiles/SP_PC.dir/src/node.c.obj.d"
+  "C:/Users/pshev/git/PC_SP/src/out_file.c" "CMakeFiles/SP_PC.dir/src/out_file.c.obj" "gcc" "CMakeFiles/SP_PC.dir/src/out_file.c.obj.d"
   "C:/Users/pshev/git/PC_SP/src/parameters.c" "CMakeFiles/SP_PC.dir/src/parameters.c.obj" "gcc" "CMakeFiles/SP_PC.dir/src/parameters.c.obj.d"
   "C:/Users/pshev/git/PC_SP/src/vector.c" "CMakeFiles/SP_PC.dir/src/vector.c.obj" "gcc" "CMakeFiles/SP_PC.dir/src/vector.c.obj.d"
   )

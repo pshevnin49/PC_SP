@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SP_PC.dir/src/main.c.obj.d"
   "CMakeFiles/SP_PC.dir/src/node.c.obj"
   "CMakeFiles/SP_PC.dir/src/node.c.obj.d"
+  "CMakeFiles/SP_PC.dir/src/out_file.c.obj"
+  "CMakeFiles/SP_PC.dir/src/out_file.c.obj.d"
   "CMakeFiles/SP_PC.dir/src/parameters.c.obj"
   "CMakeFiles/SP_PC.dir/src/parameters.c.obj.d"
   "CMakeFiles/SP_PC.dir/src/vector.c.obj"

@@ -96,10 +96,24 @@ CMakeFiles/SP_PC.dir/src/parameters.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SP_PC.dir/src/parameters.c.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pshev\git\PC_SP\src\parameters.c -o CMakeFiles\SP_PC.dir\src\parameters.c.s
 
+CMakeFiles/SP_PC.dir/src/out_file.c.obj: CMakeFiles/SP_PC.dir/flags.make
+CMakeFiles/SP_PC.dir/src/out_file.c.obj: ../src/out_file.c
+CMakeFiles/SP_PC.dir/src/out_file.c.obj: CMakeFiles/SP_PC.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/SP_PC.dir/src/out_file.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SP_PC.dir/src/out_file.c.obj -MF CMakeFiles\SP_PC.dir\src\out_file.c.obj.d -o CMakeFiles\SP_PC.dir\src\out_file.c.obj -c C:\Users\pshev\git\PC_SP\src\out_file.c
+
+CMakeFiles/SP_PC.dir/src/out_file.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SP_PC.dir/src/out_file.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pshev\git\PC_SP\src\out_file.c > CMakeFiles\SP_PC.dir\src\out_file.c.i
+
+CMakeFiles/SP_PC.dir/src/out_file.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SP_PC.dir/src/out_file.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pshev\git\PC_SP\src\out_file.c -o CMakeFiles\SP_PC.dir\src\out_file.c.s
+
 CMakeFiles/SP_PC.dir/src/ford_fulkerson.c.obj: CMakeFiles/SP_PC.dir/flags.make
 CMakeFiles/SP_PC.dir/src/ford_fulkerson.c.obj: ../src/ford_fulkerson.c
 CMakeFiles/SP_PC.dir/src/ford_fulkerson.c.obj: CMakeFiles/SP_PC.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/SP_PC.dir/src/ford_fulkerson.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/SP_PC.dir/src/ford_fulkerson.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SP_PC.dir/src/ford_fulkerson.c.obj -MF CMakeFiles\SP_PC.dir\src\ford_fulkerson.c.obj.d -o CMakeFiles\SP_PC.dir\src\ford_fulkerson.c.obj -c C:\Users\pshev\git\PC_SP\src\ford_fulkerson.c
 
 CMakeFiles/SP_PC.dir/src/ford_fulkerson.c.i: cmake_force
@@ -113,7 +127,7 @@ CMakeFiles/SP_PC.dir/src/ford_fulkerson.c.s: cmake_force
 CMakeFiles/SP_PC.dir/src/loader.c.obj: CMakeFiles/SP_PC.dir/flags.make
 CMakeFiles/SP_PC.dir/src/loader.c.obj: ../src/loader.c
 CMakeFiles/SP_PC.dir/src/loader.c.obj: CMakeFiles/SP_PC.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/SP_PC.dir/src/loader.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/SP_PC.dir/src/loader.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SP_PC.dir/src/loader.c.obj -MF CMakeFiles\SP_PC.dir\src\loader.c.obj.d -o CMakeFiles\SP_PC.dir\src\loader.c.obj -c C:\Users\pshev\git\PC_SP\src\loader.c
 
 CMakeFiles/SP_PC.dir/src/loader.c.i: cmake_force
@@ -127,7 +141,7 @@ CMakeFiles/SP_PC.dir/src/loader.c.s: cmake_force
 CMakeFiles/SP_PC.dir/src/vector.c.obj: CMakeFiles/SP_PC.dir/flags.make
 CMakeFiles/SP_PC.dir/src/vector.c.obj: ../src/vector.c
 CMakeFiles/SP_PC.dir/src/vector.c.obj: CMakeFiles/SP_PC.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/SP_PC.dir/src/vector.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/SP_PC.dir/src/vector.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SP_PC.dir/src/vector.c.obj -MF CMakeFiles\SP_PC.dir\src\vector.c.obj.d -o CMakeFiles\SP_PC.dir\src\vector.c.obj -c C:\Users\pshev\git\PC_SP\src\vector.c
 
 CMakeFiles/SP_PC.dir/src/vector.c.i: cmake_force
@@ -141,7 +155,7 @@ CMakeFiles/SP_PC.dir/src/vector.c.s: cmake_force
 CMakeFiles/SP_PC.dir/src/node.c.obj: CMakeFiles/SP_PC.dir/flags.make
 CMakeFiles/SP_PC.dir/src/node.c.obj: ../src/node.c
 CMakeFiles/SP_PC.dir/src/node.c.obj: CMakeFiles/SP_PC.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/SP_PC.dir/src/node.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/SP_PC.dir/src/node.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SP_PC.dir/src/node.c.obj -MF CMakeFiles\SP_PC.dir\src\node.c.obj.d -o CMakeFiles\SP_PC.dir\src\node.c.obj -c C:\Users\pshev\git\PC_SP\src\node.c
 
 CMakeFiles/SP_PC.dir/src/node.c.i: cmake_force
@@ -155,7 +169,7 @@ CMakeFiles/SP_PC.dir/src/node.c.s: cmake_force
 CMakeFiles/SP_PC.dir/src/edge.c.obj: CMakeFiles/SP_PC.dir/flags.make
 CMakeFiles/SP_PC.dir/src/edge.c.obj: ../src/edge.c
 CMakeFiles/SP_PC.dir/src/edge.c.obj: CMakeFiles/SP_PC.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/SP_PC.dir/src/edge.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/SP_PC.dir/src/edge.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SP_PC.dir/src/edge.c.obj -MF CMakeFiles\SP_PC.dir\src\edge.c.obj.d -o CMakeFiles\SP_PC.dir\src\edge.c.obj -c C:\Users\pshev\git\PC_SP\src\edge.c
 
 CMakeFiles/SP_PC.dir/src/edge.c.i: cmake_force
@@ -170,6 +184,7 @@ CMakeFiles/SP_PC.dir/src/edge.c.s: cmake_force
 SP_PC_OBJECTS = \
 "CMakeFiles/SP_PC.dir/src/main.c.obj" \
 "CMakeFiles/SP_PC.dir/src/parameters.c.obj" \
+"CMakeFiles/SP_PC.dir/src/out_file.c.obj" \
 "CMakeFiles/SP_PC.dir/src/ford_fulkerson.c.obj" \
 "CMakeFiles/SP_PC.dir/src/loader.c.obj" \
 "CMakeFiles/SP_PC.dir/src/vector.c.obj" \
@@ -181,6 +196,7 @@ SP_PC_EXTERNAL_OBJECTS =
 
 SP_PC.exe: CMakeFiles/SP_PC.dir/src/main.c.obj
 SP_PC.exe: CMakeFiles/SP_PC.dir/src/parameters.c.obj
+SP_PC.exe: CMakeFiles/SP_PC.dir/src/out_file.c.obj
 SP_PC.exe: CMakeFiles/SP_PC.dir/src/ford_fulkerson.c.obj
 SP_PC.exe: CMakeFiles/SP_PC.dir/src/loader.c.obj
 SP_PC.exe: CMakeFiles/SP_PC.dir/src/vector.c.obj
@@ -190,7 +206,7 @@ SP_PC.exe: CMakeFiles/SP_PC.dir/build.make
 SP_PC.exe: CMakeFiles/SP_PC.dir/linklibs.rsp
 SP_PC.exe: CMakeFiles/SP_PC.dir/objects1.rsp
 SP_PC.exe: CMakeFiles/SP_PC.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable SP_PC.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable SP_PC.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\SP_PC.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

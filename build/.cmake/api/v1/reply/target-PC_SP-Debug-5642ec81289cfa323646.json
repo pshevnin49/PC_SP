@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "SP_PC.exe"
+			"path" : "PC_SP.exe"
 		},
 		{
-			"path" : "SP_PC.pdb"
+			"path" : "PC_SP.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -38,7 +38,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-Wall -g"
+					"fragment" : "-Wall -Wextra -pedantic -ansi -g -g"
 				}
 			],
 			"language" : "C",
@@ -50,17 +50,18 @@
 				3,
 				4,
 				5,
-				6
+				6,
+				7
 			]
 		}
 	],
-	"id" : "SP_PC::@6890427a1f51a3e7e1df",
+	"id" : "PC_SP::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-Wall -g",
+				"fragment" : "-Wall -Wextra -pedantic -ansi -g -g",
 				"role" : "flags"
 			},
 			{
@@ -74,8 +75,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "SP_PC",
-	"nameOnDisk" : "SP_PC.exe",
+	"name" : "PC_SP",
+	"nameOnDisk" : "PC_SP.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -93,7 +94,8 @@
 				3,
 				4,
 				5,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -102,43 +104,49 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/main.c",
+			"path" : "main.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/parameters.c",
+			"path" : "parameters.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/ford_fulkerson.c",
+			"path" : "out_file.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/loader.c",
+			"path" : "ford_fulkerson.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/vector.c",
+			"path" : "loader.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/node.c",
+			"path" : "vector.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/edge.c",
+			"path" : "node.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "edge.c",
 			"sourceGroupIndex" : 0
 		}
 	],

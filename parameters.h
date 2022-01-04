@@ -1,6 +1,11 @@
 #ifndef _PARAMETERS_H
 #define _PARAMETERS_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "loader.h"
+
 #define VERTEX_PARAMETER "-v\0"
 #define EDGE_PARAMETER "-e\0"
 #define SOURCE_PARAMETER "-s\0"
@@ -11,7 +16,7 @@
 #define EXTENSION_LEN 4
 #define CORRECT_EXTENSION ".csv\0"
 
-#define DIRECTORY_PATH "../data/\0"
+#define DIRECTORY_PATH "data/\0"
 #define UNDEFINED_PATH "undefined\0"
 #define FILENAME_LEN 32
 
@@ -24,7 +29,6 @@ extern int is_valid;
 
 int format_check(char *name);
 
-int parameters_procesing(int argc, char *argv[]);
-
+int parameters_processing(int argc, char *argv[]);
 
 #endif

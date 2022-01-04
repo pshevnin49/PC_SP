@@ -1,5 +1,6 @@
 CMakeFiles/SP_PC.dir/src/loader.c.obj: \
  C:\Users\pshev\git\PC_SP\src\loader.c \
+ C:\Users\pshev\git\PC_SP\src\loader.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/x86_64-w64-mingw32/include/stdio.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/x86_64-w64-mingw32/include/_mingw.h \
@@ -26,5 +27,4 @@ CMakeFiles/SP_PC.dir/src/loader.c.obj: \
  C:\Users\pshev\git\PC_SP\src\vector.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stddef.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/x86_64-w64-mingw32/include/stddef.h \
- C:\Users\pshev\git\PC_SP\src\loader.h \
  C:\Users\pshev\git\PC_SP\src\parameters.h

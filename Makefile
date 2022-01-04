@@ -1,37 +1,37 @@
 CC = gcc
 
-CFLAGS = -Wall # -Wextra -pedantic -ansi -g
+CFLAGS = -Wall -Wextra -pedantic -ansi -g
 LDFLAGS = $(CFLAGS)
 
-BUILD_DIR = build
 BIN = PC_SP.exe
 
-all: clean $(BUILD_DIR) $(BUILD_DIR)/$(BIN)
+all: clean $(BIN)
 
-$(BUILD_DIR)/$(BIN): $(BUILD_DIR)/vector.o $(BUILD_DIR)/edge.o $(BUILD_DIR)/node.o $(BUILD_DIR)/ford_fulkerson.o $(BUILD_DIR)/parameters.o $(BUILD_DIR)/main.o
+$(BIN): vector.o edge.o node.o ford_fulkerson.o out_file.o parameters.o main.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-$(BUILD_DIR)/vector.o: src/vector.c
+vector.o: vector.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-$(BUILD_DIR)/edge.o: src/edge.c
+edge.o: edge.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-$(BUILD_DIR)/node.o: src/node.c
+node.o: node.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-$(BUILD_DIR)/ford_fulkerson.o: src/ford_fulkerson.c
+ford_fulkerson.o: ford_fulkerson.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-$(BUILD_DIR)/parameters.o: src/parameters.c
+out_file.o: out_file.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-$(BUILD_DIR)/main.o: src/main.c
+parameters.o: parameters.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-$(BUILD_DIR):
-	mkdir $@
+main.o: main.c
+	$(CC) -c $(CFLAGS) -o $@ $<
 
-# on linux use rm -rf $(BUILD_DIR)
+
+# on linux use rm -rf 
 clean:
-	del /F /Q $(BUILD_DIR)  
+	del /F /Q *.o  
