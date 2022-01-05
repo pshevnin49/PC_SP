@@ -1,6 +1,17 @@
 #include "out_file.h"
-
+/* vystupní soubor */
 FILE *out_file;
+
+/**
+ * @brief Comparator slouží ke seřazení hran minimalního řezu, které jsou připravene k vypisu do .csv souboru. 
+ * Přijímá ukazatelé na dvě hrany, porovnáva indexy těcto hran, a vrací kladné nebo zaporné číslo
+ * @param edge1 první porovnávaná hrana 
+ * @param edge2 druha porovnávaná hrana 
+ * @return int vystup je kladný, kdýž index první hrany je větší, záporný, kdýž větší je index druhé hrany. nula když jsou stejná
+ */
+int comparator(const void *edge1, const void *edge2){
+    return ((*(edge_t **)edge1)->id - (*(edge_t **)edge2)->id);              
+}
 
 int out_write(char *name){
     size_t a;
@@ -11,6 +22,10 @@ int out_write(char *name){
         return EXIT_FAILURE_OUT;
     }
 
+    if(!strcmp(name, UNDEFINED_PATH)){
+        return EXIT_SUCCESS;
+    }
+
     out_file = fopen(name, WRITE);
     if(!out_file){
         printf("Invalid output file.\n");
@@ -18,11 +33,14 @@ int out_write(char *name){
     }
 
     if(!out_edges){
-        return EXIT_FAILURE_UNDEF;
         fclose(out_file);
+        return EXIT_FAILURE_UNDEF;
     }
 
     fprintf(out_file, "%s\n", EDGE_TABLE_FORMAT);
+    
+    /* Seřázení hran pomocí funkce qsort z knihovny stdlib.h */
+    qsort(out_edges->data, out_edges->count, sizeof(edge_t*), comparator);
 
     for(a = 0; a < out_edges->count; ++a){
         out_edge = *(edge_t **)vector_at(out_edges, a);
@@ -42,5 +60,7 @@ int out_write(char *name){
     fclose(out_file);
     return EXIT_SUCCESS;
 }
+
+
 
 

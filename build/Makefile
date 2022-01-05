@@ -128,6 +128,54 @@ PC_SP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/build
 .PHONY : PC_SP/fast
 
+algorithm.obj: algorithm.c.obj
+.PHONY : algorithm.obj
+
+# target to build an object file
+algorithm.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/algorithm.c.obj
+.PHONY : algorithm.c.obj
+
+algorithm.i: algorithm.c.i
+.PHONY : algorithm.i
+
+# target to preprocess a source file
+algorithm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/algorithm.c.i
+.PHONY : algorithm.c.i
+
+algorithm.s: algorithm.c.s
+.PHONY : algorithm.s
+
+# target to generate assembly for a file
+algorithm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/algorithm.c.s
+.PHONY : algorithm.c.s
+
+bfs.obj: bfs.c.obj
+.PHONY : bfs.obj
+
+# target to build an object file
+bfs.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/bfs.c.obj
+.PHONY : bfs.c.obj
+
+bfs.i: bfs.c.i
+.PHONY : bfs.i
+
+# target to preprocess a source file
+bfs.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/bfs.c.i
+.PHONY : bfs.c.i
+
+bfs.s: bfs.c.s
+.PHONY : bfs.s
+
+# target to generate assembly for a file
+bfs.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/bfs.c.s
+.PHONY : bfs.c.s
+
 edge.obj: edge.c.obj
 .PHONY : edge.obj
 
@@ -151,30 +199,6 @@ edge.s: edge.c.s
 edge.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/edge.c.s
 .PHONY : edge.c.s
-
-ford_fulkerson.obj: ford_fulkerson.c.obj
-.PHONY : ford_fulkerson.obj
-
-# target to build an object file
-ford_fulkerson.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/ford_fulkerson.c.obj
-.PHONY : ford_fulkerson.c.obj
-
-ford_fulkerson.i: ford_fulkerson.c.i
-.PHONY : ford_fulkerson.i
-
-# target to preprocess a source file
-ford_fulkerson.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/ford_fulkerson.c.i
-.PHONY : ford_fulkerson.c.i
-
-ford_fulkerson.s: ford_fulkerson.c.s
-.PHONY : ford_fulkerson.s
-
-# target to generate assembly for a file
-ford_fulkerson.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/ford_fulkerson.c.s
-.PHONY : ford_fulkerson.c.s
 
 loader.obj: loader.c.obj
 .PHONY : loader.obj
@@ -329,12 +353,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... PC_SP
+	@echo ... algorithm.obj
+	@echo ... algorithm.i
+	@echo ... algorithm.s
+	@echo ... bfs.obj
+	@echo ... bfs.i
+	@echo ... bfs.s
 	@echo ... edge.obj
 	@echo ... edge.i
 	@echo ... edge.s
-	@echo ... ford_fulkerson.obj
-	@echo ... ford_fulkerson.i
-	@echo ... ford_fulkerson.s
 	@echo ... loader.obj
 	@echo ... loader.i
 	@echo ... loader.s

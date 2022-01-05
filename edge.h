@@ -1,4 +1,11 @@
-
+/**
+ * @file edge.h
+ * @author Pavel Shevnin
+ * @brief 
+ * @version 1.1
+ * @date 2021-12-19
+ * 
+ */
 #ifndef EDGE_H
 #define EDGE_H
 
@@ -22,8 +29,8 @@ typedef struct _edge {
 }edge_t;
 
 /**
- * @brief @brief Funkce edge create prijima parametry, a generuje novou hranu
- * flow hrany na zacatku je 0
+ * @brief @brief Funkce edge create přijimá parametry, a generuje novou hranu
+ * 
  * 
  * @param id index hrany
  * @param source index uzlu ze ktereho hrana vychazi
@@ -36,8 +43,9 @@ typedef struct _edge {
 edge_t *edge_create(const int id, const int source, const int target, const int capacity, const int is_valid, const char *wkt);
 
 /**
- * @brief Uvolní hranu z paměti.
- * @param v Ukazatel na hranu.
+ * @brief Funkce pro uvolnění hrany
+ * 
+ * @param poor Uvolňovana hrana 
  */
 void edge_destroy(edge_t **poor);
 

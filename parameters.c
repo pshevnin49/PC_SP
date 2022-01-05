@@ -1,19 +1,16 @@
 #include "parameters.h"
 
-
-char out_path[FILENAME_LEN] = "data/out.csv\0";                   
-char node_path[FILENAME_LEN] = UNDEFINED_PATH;                
+/* Cesta vystupního souboru, na začatku je "undefined" */
+char out_path[FILENAME_LEN] = UNDEFINED_PATH;
+/* Cesta souboru s uzly, na začatku je "undefined" */                   
+char node_path[FILENAME_LEN] = UNDEFINED_PATH;
+/* Cesta souboru s hrany, na začatku je "undefined" */                
 char edge_path[FILENAME_LEN] = UNDEFINED_PATH; 
+
 int source_id = 0;
 int target_id = 0;             
 int is_valid = 0;                     
     
-/**
- * @brief vraci 0, kdyz format nazvu je dobry 
- * 
- * @param name 
- * @return int 
- */
 int format_check(char *name){
     char extension[EXTENSION_LEN];
     int name_len;
@@ -21,24 +18,17 @@ int format_check(char *name){
     if(!name){
         return 1;
     }
-
+    /* Bereme 4 poslední symboly názvu a koukamé, aby se rovnali .csv*/
     name_len = strlen(name);
     strcpy(extension, &name[name_len - EXTENSION_LEN]);
 
-    if(strcmp(extension, CORRECT_EXTENSION)){
-        return 1;
+    if(!strcmp(extension, CORRECT_EXTENSION)){
+        return EXIT_SUCCESS;
     }
     
-    return 0;
+    return EXIT_FAILURE;
 }
 
-/**
- * @brief Prijima parametry z prikazove radky, a rozdeluje je do spravnych promennych
- * 
- * @param argc 
- * @param argv 
- * @return int 
- */
 int parameters_processing(int argc, char *argv[]){
     int a;
     
@@ -47,10 +37,10 @@ int parameters_processing(int argc, char *argv[]){
         return EXIT_FAILURE_UNDEF;
     }
 
+    /* Procházím všichní parametry*/
     for(a = 1; a < argc; ++a){
         if(strcmp (VERTEX_PARAMETER, argv[a]) == 0 && (a + 1 < argc)){
             if((!format_check(argv[a + 1])) && strcmp (UNDEFINED_PATH, node_path) == 0){
-                printf("Vertex\n");
                 strcpy(node_path, DIRECTORY_PATH);
                 strcat(node_path, argv[a + 1]);
             }
@@ -69,7 +59,7 @@ int parameters_processing(int argc, char *argv[]){
                 strcat(out_path, argv[a + 1]);
             }
             else{
-                strcat(out_path, "");
+                strcpy(out_path, "");
             }
         }
         

@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/PC_SP.dir/algorithm.c.obj"
+  "CMakeFiles/PC_SP.dir/algorithm.c.obj.d"
+  "CMakeFiles/PC_SP.dir/bfs.c.obj"
+  "CMakeFiles/PC_SP.dir/bfs.c.obj.d"
   "CMakeFiles/PC_SP.dir/edge.c.obj"
   "CMakeFiles/PC_SP.dir/edge.c.obj.d"
-  "CMakeFiles/PC_SP.dir/ford_fulkerson.c.obj"
-  "CMakeFiles/PC_SP.dir/ford_fulkerson.c.obj.d"
   "CMakeFiles/PC_SP.dir/loader.c.obj"
   "CMakeFiles/PC_SP.dir/loader.c.obj.d"
   "CMakeFiles/PC_SP.dir/main.c.obj"

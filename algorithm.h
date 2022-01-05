@@ -1,15 +1,15 @@
 
 
-#ifndef _FORDFULKERSON_H
-#define _FORDFULKERSON_H
+#ifndef _ALGORITHM_H
+#define _ALGORITHM_H
 
 #include <stdio.h>
 #include <math.h>
-#include "vector.h"
-#include "loader.h"
 #include "node.h"
 #include "edge.h"
-
+#include "loader.h"
+#include "vector.h"
+#include "bfs.h"
 
 extern vector_t *out_edges;
 

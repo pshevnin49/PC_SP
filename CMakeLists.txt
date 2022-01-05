@@ -7,7 +7,8 @@ add_executable(PC_SP
     main.c
     parameters.c
     out_file.c
-    ford_fulkerson.c
+    algorithm.c
+    bfs.c
     loader.c
     vector.c
     node.c

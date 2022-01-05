@@ -1,8 +1,8 @@
 #include "node.h"
 
 node_t *node_create(const int id, const char *wkt){
-
     node_t *new;
+    
     if (!wkt || strlen(wkt) == 0){
         return NULL;
     }
@@ -11,12 +11,12 @@ node_t *node_create(const int id, const char *wkt){
     if(!new){
         return NULL;
     }
-
+    
     new->id = id;
-    new->color = 0;
     new->pred = -1;
-
+    new->color = 0;
     new->wkt = (char *)malloc(strlen(wkt) + 1);
+
     if(!new->wkt){
         free(new);
         return NULL;
@@ -29,10 +29,6 @@ node_t *node_create(const int id, const char *wkt){
 
 }
 
-/**
- * @brief Funkce pro uvolnění osoby.
- * @param poor Uvolňována osoba.
- */
 void node_destroy(node_t **poor){
     
     if(!poor || !*poor){
@@ -46,7 +42,6 @@ void node_destroy(node_t **poor){
     (*poor)->wkt = NULL;
     vector_destroy(&((*poor)->edges));
 
-    free(*poor); /* Tady zkusíme udělat změnu a podíváme se, jak se bude valgrind chovat! */
+    free(*poor); 
     *poor = NULL;
 }
-

@@ -3,6 +3,7 @@
         "stdio.h": "c",
         "stdlib.h": "c",
         "limits": "c",
-        "ford_fulkerson.h": "c"
+        "ford_fulkerson.h": "c",
+        "math.h": "c"
     }
 }
