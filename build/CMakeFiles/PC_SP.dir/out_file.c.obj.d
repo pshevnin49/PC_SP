@@ -28,4 +28,4 @@ CMakeFiles/PC_SP.dir/out_file.c.obj: C:\Users\pshev\git\PC_SP\out_file.c \
  C:\Users\pshev\git\PC_SP\loader.h C:\Users\pshev\git\PC_SP\parameters.h \
  C:\Users\pshev\git\PC_SP\algorithm.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/x86_64-w64-mingw32/include/math.h \
- C:\Users\pshev\git\PC_SP\bfs.h
+ C:\Users\pshev\git\PC_SP\bfs.h C:\Users\pshev\git\PC_SP\queue.h

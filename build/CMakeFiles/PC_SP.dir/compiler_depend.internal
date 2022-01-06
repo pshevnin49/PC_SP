@@ -34,6 +34,7 @@ CMakeFiles/PC_SP.dir/algorithm.c.obj
  C:/Users/pshev/git/PC_SP/loader.h
  C:/Users/pshev/git/PC_SP/parameters.h
  C:/Users/pshev/git/PC_SP/bfs.h
+ C:/Users/pshev/git/PC_SP/queue.h
 
 CMakeFiles/PC_SP.dir/bfs.c.obj
  C:/Users/pshev/git/PC_SP/bfs.c
@@ -67,6 +68,7 @@ CMakeFiles/PC_SP.dir/bfs.c.obj
  C:/Users/pshev/git/PC_SP/edge.h
  C:/Users/pshev/git/PC_SP/loader.h
  C:/Users/pshev/git/PC_SP/parameters.h
+ C:/Users/pshev/git/PC_SP/queue.h
 
 CMakeFiles/PC_SP.dir/edge.c.obj
  C:/Users/pshev/git/PC_SP/edge.c
@@ -157,6 +159,7 @@ CMakeFiles/PC_SP.dir/main.c.obj
  C:/Users/pshev/git/PC_SP/algorithm.h
  C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/math.h
  C:/Users/pshev/git/PC_SP/bfs.h
+ C:/Users/pshev/git/PC_SP/queue.h
  C:/Users/pshev/git/PC_SP/out_file.h
 
 CMakeFiles/PC_SP.dir/node.c.obj
@@ -222,6 +225,7 @@ CMakeFiles/PC_SP.dir/out_file.c.obj
  C:/Users/pshev/git/PC_SP/algorithm.h
  C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/math.h
  C:/Users/pshev/git/PC_SP/bfs.h
+ C:/Users/pshev/git/PC_SP/queue.h
 
 CMakeFiles/PC_SP.dir/parameters.c.obj
  C:/Users/pshev/git/PC_SP/parameters.c

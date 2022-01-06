@@ -28,4 +28,5 @@ CMakeFiles/PC_SP.dir/algorithm.c.obj: \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stddef.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/x86_64-w64-mingw32/include/stddef.h \
  C:\Users\pshev\git\PC_SP\edge.h C:\Users\pshev\git\PC_SP\loader.h \
- C:\Users\pshev\git\PC_SP\parameters.h C:\Users\pshev\git\PC_SP\bfs.h
+ C:\Users\pshev\git\PC_SP\parameters.h C:\Users\pshev\git\PC_SP\bfs.h \
+ C:\Users\pshev\git\PC_SP\queue.h

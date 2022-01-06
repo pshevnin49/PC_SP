@@ -32,7 +32,8 @@ CMakeFiles/PC_SP.dir/algorithm.c.obj: ../algorithm.c \
   ../edge.h \
   ../loader.h \
   ../parameters.h \
-  ../bfs.h
+  ../bfs.h \
+  ../queue.h
 
 CMakeFiles/PC_SP.dir/bfs.c.obj: ../bfs.c \
   ../bfs.h \
@@ -64,7 +65,8 @@ CMakeFiles/PC_SP.dir/bfs.c.obj: ../bfs.c \
   C:/Program\ Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/stddef.h \
   ../edge.h \
   ../loader.h \
-  ../parameters.h
+  ../parameters.h \
+  ../queue.h
 
 CMakeFiles/PC_SP.dir/edge.c.obj: ../edge.c \
   ../edge.h \
@@ -152,6 +154,7 @@ CMakeFiles/PC_SP.dir/main.c.obj: ../main.c \
   ../algorithm.h \
   C:/Program\ Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/math.h \
   ../bfs.h \
+  ../queue.h \
   ../out_file.h
 
 CMakeFiles/PC_SP.dir/node.c.obj: ../node.c \
@@ -214,7 +217,8 @@ CMakeFiles/PC_SP.dir/out_file.c.obj: ../out_file.c \
   ../parameters.h \
   ../algorithm.h \
   C:/Program\ Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/math.h \
-  ../bfs.h
+  ../bfs.h \
+  ../queue.h
 
 CMakeFiles/PC_SP.dir/parameters.c.obj: ../parameters.c \
   ../parameters.h \
@@ -372,13 +376,13 @@ C:/Program\ Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64
 
 ../loader.h:
 
-../edge.c:
-
-../main.c:
+../out_file.h:
 
 ../queue.h:
 
-../out_file.h:
+../edge.c:
+
+../main.c:
 
 ../queue.c:
 
