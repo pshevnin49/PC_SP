@@ -1,4 +1,3 @@
-
 #include "loader.h"
 
 vector_t *indexes;
@@ -74,22 +73,24 @@ int node_loader(char *path) {
         
     if(!path){
         printf("Invalid vertex file.\n");
-        clean_and_exit();
+        return EXIT_FAILURE_VERTEX;
     }
 
     file = fopen(path, "r");
     if (!file) {
         printf("Invalid vertex file.\n");
-        clean_and_exit();
+        fclose(file); 
+        return EXIT_FAILURE_VERTEX;
     }
     
     indexes = vector_create(sizeof(int), NULL);
+    nodes = vector_create(sizeof(node_t *), (vec_it_dealloc_t)node_destroy);
+    
     if (!indexes) {
         printf("Indexes vector create ERROR.\n");
         clean_and_exit();
     }
     
-    nodes = vector_create(sizeof(node_t *), (vec_it_dealloc_t)node_destroy);
     if (!nodes) {
         printf("Nodes vector create ERROR.\n");
         clean_and_exit();
@@ -146,22 +147,24 @@ int edge_loader(char *path, int is_valid) {
 
     if(!path){
         printf("Invalid edge file.\n");
-        clean_and_exit();
+        return EXIT_FAILURE_EDGE;
     }
     
     file = fopen(path, "r");
     if (!file) {
         printf("Invalid edge file.\n");
-        clean_and_exit();
+        fclose(file);
+        return EXIT_FAILURE_EDGE;
     }
     
     indexes = vector_create(sizeof(int), NULL);
+    edges = vector_create(sizeof(edge_t *), (vec_it_dealloc_t)edge_destroy);
+    
     if (!indexes) {
         printf("Indexes vector create ERROR.\n");
         clean_and_exit();
     }
 
-    edges = vector_create(sizeof(edge_t *), (vec_it_dealloc_t)edge_destroy);
     if(!edges) {
         printf("Edges vector create ERROR.\n");
         clean_and_exit();

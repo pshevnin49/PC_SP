@@ -1,7 +1,7 @@
 /**
  * @file edge.h
  * @author Pavel Shevnin
- * @brief 
+ * @brief Soubor reprezentujicí hranu grafu doprávní sítě pro vypočet maximalního toku
  * @version 1.1
  * @date 2021-12-19
  * 
@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 /**
  * @brief Struktura edge reprezentuje hranu grafu
  * 
@@ -24,7 +25,7 @@ typedef struct _edge {
     int capacity;/*propustnost hrany*/
     int is_valid;/*je hrana validni, nebo neni (0 - 1)*/
     int flow;/*tok ktery hranou uz bezi, treba pro Ford Fulkerson algorithm*/
-    char *wkt/*wkt z csv souboru pro danou hranu*/;
+    char *wkt;/*wkt z csv souboru pro danou hranu*/
 
 }edge_t;
 

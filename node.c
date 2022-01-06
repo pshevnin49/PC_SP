@@ -38,10 +38,10 @@ void node_destroy(node_t **poor){
     (*poor)->id = 0;
     (*poor)->pred = 0;
     (*poor)->color = 0;
+    vector_destroy(&((*poor)->edges));
     free((*poor)->wkt);    
     (*poor)->wkt = NULL;
-    vector_destroy(&((*poor)->edges));
-
+    
     free(*poor); 
     *poor = NULL;
 }

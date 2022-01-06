@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/pshev/git/PC_SP/node.c" "CMakeFiles/PC_SP.dir/node.c.obj" "gcc" "CMakeFiles/PC_SP.dir/node.c.obj.d"
   "C:/Users/pshev/git/PC_SP/out_file.c" "CMakeFiles/PC_SP.dir/out_file.c.obj" "gcc" "CMakeFiles/PC_SP.dir/out_file.c.obj.d"
   "C:/Users/pshev/git/PC_SP/parameters.c" "CMakeFiles/PC_SP.dir/parameters.c.obj" "gcc" "CMakeFiles/PC_SP.dir/parameters.c.obj.d"
+  "C:/Users/pshev/git/PC_SP/queue.c" "CMakeFiles/PC_SP.dir/queue.c.obj" "gcc" "CMakeFiles/PC_SP.dir/queue.c.obj.d"
   "C:/Users/pshev/git/PC_SP/vector.c" "CMakeFiles/PC_SP.dir/vector.c.obj" "gcc" "CMakeFiles/PC_SP.dir/vector.c.obj.d"
   )
 

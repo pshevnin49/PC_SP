@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/PC_SP.dir/out_file.c.obj.d"
   "CMakeFiles/PC_SP.dir/parameters.c.obj"
   "CMakeFiles/PC_SP.dir/parameters.c.obj.d"
+  "CMakeFiles/PC_SP.dir/queue.c.obj"
+  "CMakeFiles/PC_SP.dir/queue.c.obj.d"
   "CMakeFiles/PC_SP.dir/vector.c.obj"
   "CMakeFiles/PC_SP.dir/vector.c.obj.d"
   "PC_SP.exe"

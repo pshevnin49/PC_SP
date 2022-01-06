@@ -15,6 +15,7 @@
 #include "edge.h"
 #include "loader.h"
 #include "vector.h"
+#include "queue.h"
 
 #define WHITE 0
 #define GREY 1

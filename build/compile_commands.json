@@ -26,6 +26,11 @@
 },
 {
   "directory": "C:/Users/pshev/git/PC_SP/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -Wextra -pedantic -ansi -g -g -o CMakeFiles\\PC_SP.dir\\queue.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\queue.c",
+  "file": "C:/Users/pshev/git/PC_SP/queue.c"
+},
+{
+  "directory": "C:/Users/pshev/git/PC_SP/build",
   "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE   -Wall -Wextra -pedantic -ansi -g -g -o CMakeFiles\\PC_SP.dir\\loader.c.obj -c C:\\Users\\pshev\\git\\PC_SP\\loader.c",
   "file": "C:/Users/pshev/git/PC_SP/loader.c"
 },

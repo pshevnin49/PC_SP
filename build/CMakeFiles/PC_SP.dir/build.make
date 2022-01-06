@@ -138,10 +138,24 @@ CMakeFiles/PC_SP.dir/bfs.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/PC_SP.dir/bfs.c.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pshev\git\PC_SP\bfs.c -o CMakeFiles\PC_SP.dir\bfs.c.s
 
+CMakeFiles/PC_SP.dir/queue.c.obj: CMakeFiles/PC_SP.dir/flags.make
+CMakeFiles/PC_SP.dir/queue.c.obj: ../queue.c
+CMakeFiles/PC_SP.dir/queue.c.obj: CMakeFiles/PC_SP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/PC_SP.dir/queue.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/PC_SP.dir/queue.c.obj -MF CMakeFiles\PC_SP.dir\queue.c.obj.d -o CMakeFiles\PC_SP.dir\queue.c.obj -c C:\Users\pshev\git\PC_SP\queue.c
+
+CMakeFiles/PC_SP.dir/queue.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/PC_SP.dir/queue.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pshev\git\PC_SP\queue.c > CMakeFiles\PC_SP.dir\queue.c.i
+
+CMakeFiles/PC_SP.dir/queue.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/PC_SP.dir/queue.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pshev\git\PC_SP\queue.c -o CMakeFiles\PC_SP.dir\queue.c.s
+
 CMakeFiles/PC_SP.dir/loader.c.obj: CMakeFiles/PC_SP.dir/flags.make
 CMakeFiles/PC_SP.dir/loader.c.obj: ../loader.c
 CMakeFiles/PC_SP.dir/loader.c.obj: CMakeFiles/PC_SP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/PC_SP.dir/loader.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/PC_SP.dir/loader.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/PC_SP.dir/loader.c.obj -MF CMakeFiles\PC_SP.dir\loader.c.obj.d -o CMakeFiles\PC_SP.dir\loader.c.obj -c C:\Users\pshev\git\PC_SP\loader.c
 
 CMakeFiles/PC_SP.dir/loader.c.i: cmake_force
@@ -155,7 +169,7 @@ CMakeFiles/PC_SP.dir/loader.c.s: cmake_force
 CMakeFiles/PC_SP.dir/vector.c.obj: CMakeFiles/PC_SP.dir/flags.make
 CMakeFiles/PC_SP.dir/vector.c.obj: ../vector.c
 CMakeFiles/PC_SP.dir/vector.c.obj: CMakeFiles/PC_SP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/PC_SP.dir/vector.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/PC_SP.dir/vector.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/PC_SP.dir/vector.c.obj -MF CMakeFiles\PC_SP.dir\vector.c.obj.d -o CMakeFiles\PC_SP.dir\vector.c.obj -c C:\Users\pshev\git\PC_SP\vector.c
 
 CMakeFiles/PC_SP.dir/vector.c.i: cmake_force
@@ -169,7 +183,7 @@ CMakeFiles/PC_SP.dir/vector.c.s: cmake_force
 CMakeFiles/PC_SP.dir/node.c.obj: CMakeFiles/PC_SP.dir/flags.make
 CMakeFiles/PC_SP.dir/node.c.obj: ../node.c
 CMakeFiles/PC_SP.dir/node.c.obj: CMakeFiles/PC_SP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/PC_SP.dir/node.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/PC_SP.dir/node.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/PC_SP.dir/node.c.obj -MF CMakeFiles\PC_SP.dir\node.c.obj.d -o CMakeFiles\PC_SP.dir\node.c.obj -c C:\Users\pshev\git\PC_SP\node.c
 
 CMakeFiles/PC_SP.dir/node.c.i: cmake_force
@@ -183,7 +197,7 @@ CMakeFiles/PC_SP.dir/node.c.s: cmake_force
 CMakeFiles/PC_SP.dir/edge.c.obj: CMakeFiles/PC_SP.dir/flags.make
 CMakeFiles/PC_SP.dir/edge.c.obj: ../edge.c
 CMakeFiles/PC_SP.dir/edge.c.obj: CMakeFiles/PC_SP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/PC_SP.dir/edge.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/PC_SP.dir/edge.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/PC_SP.dir/edge.c.obj -MF CMakeFiles\PC_SP.dir\edge.c.obj.d -o CMakeFiles\PC_SP.dir\edge.c.obj -c C:\Users\pshev\git\PC_SP\edge.c
 
 CMakeFiles/PC_SP.dir/edge.c.i: cmake_force
@@ -201,6 +215,7 @@ PC_SP_OBJECTS = \
 "CMakeFiles/PC_SP.dir/out_file.c.obj" \
 "CMakeFiles/PC_SP.dir/algorithm.c.obj" \
 "CMakeFiles/PC_SP.dir/bfs.c.obj" \
+"CMakeFiles/PC_SP.dir/queue.c.obj" \
 "CMakeFiles/PC_SP.dir/loader.c.obj" \
 "CMakeFiles/PC_SP.dir/vector.c.obj" \
 "CMakeFiles/PC_SP.dir/node.c.obj" \
@@ -214,6 +229,7 @@ PC_SP.exe: CMakeFiles/PC_SP.dir/parameters.c.obj
 PC_SP.exe: CMakeFiles/PC_SP.dir/out_file.c.obj
 PC_SP.exe: CMakeFiles/PC_SP.dir/algorithm.c.obj
 PC_SP.exe: CMakeFiles/PC_SP.dir/bfs.c.obj
+PC_SP.exe: CMakeFiles/PC_SP.dir/queue.c.obj
 PC_SP.exe: CMakeFiles/PC_SP.dir/loader.c.obj
 PC_SP.exe: CMakeFiles/PC_SP.dir/vector.c.obj
 PC_SP.exe: CMakeFiles/PC_SP.dir/node.c.obj
@@ -222,7 +238,7 @@ PC_SP.exe: CMakeFiles/PC_SP.dir/build.make
 PC_SP.exe: CMakeFiles/PC_SP.dir/linklibs.rsp
 PC_SP.exe: CMakeFiles/PC_SP.dir/objects1.rsp
 PC_SP.exe: CMakeFiles/PC_SP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable PC_SP.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pshev\git\PC_SP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable PC_SP.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\PC_SP.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

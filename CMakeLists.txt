@@ -9,6 +9,7 @@ add_executable(PC_SP
     out_file.c
     algorithm.c
     bfs.c
+    queue.c
     loader.c
     vector.c
     node.c

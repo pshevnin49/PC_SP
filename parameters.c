@@ -7,8 +7,8 @@ char node_path[FILENAME_LEN] = UNDEFINED_PATH;
 /* Cesta souboru s hrany, na začatku je "undefined" */                
 char edge_path[FILENAME_LEN] = UNDEFINED_PATH; 
 
-int source_id = 0;
-int target_id = 0;             
+int source_id = -1;
+int target_id = -1;             
 int is_valid = 0;                     
     
 int format_check(char *name){
@@ -33,7 +33,6 @@ int parameters_processing(int argc, char *argv[]){
     int a;
     
     if(argc <= 1 || !argv){
-        printf("Parameters error. \n");
         return EXIT_FAILURE_UNDEF;
     }
 

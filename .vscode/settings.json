@@ -4,6 +4,8 @@
         "stdlib.h": "c",
         "limits": "c",
         "ford_fulkerson.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "vector.h": "c",
+        "edge.h": "c"
     }
 }

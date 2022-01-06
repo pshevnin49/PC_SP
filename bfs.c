@@ -86,6 +86,6 @@ int bfs(int start, int target){
 			}
 		}
 	}
-	
+	vector_destroy(&q);
 	return find_node(target)->color == BLACK;
 }

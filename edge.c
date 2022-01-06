@@ -12,8 +12,8 @@
  * @return edge_t* ukazatel na hranu
  */
 edge_t *edge_create(const int id, const int source, const int target, const int capacity, const int is_valid, const char *wkt){
-    
     edge_t *new;
+    
     if (!wkt || strlen(wkt) == 0) {
         return NULL;
     }

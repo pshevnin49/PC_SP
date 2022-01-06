@@ -2,13 +2,13 @@
 
 vector_t *out_edges;
 
-int ford_fulkerson(int source, int sink){
+int ford_fulkerson(int source, int target){
 	int max_flow = 0;
 
 	edge_t *edge, *edge_out;
 	node_t *node, *pred_node;
 
-	if(source == sink){
+	if(source == target){
 		return max_flow;
 	}
 
@@ -18,12 +18,10 @@ int ford_fulkerson(int source, int sink){
 		return EXIT_FAILURE_UNDEF;
 	}
 
-	while(bfs(source, sink)){
+	while(bfs(source, target)){
 		int increment;
 		
-		vector_destroy(&q);
-		node = find_node(sink);
-
+		node = find_node(target);
 		increment = O;
 
 		while(node->pred >= 0){
@@ -35,7 +33,7 @@ int ford_fulkerson(int source, int sink){
 			}
 			node = pred_node;
 		} 
-		node = find_node(sink);
+		node = find_node(target);
 		
 		while(node->pred >= 0){
 			pred_node = find_node(node->pred);

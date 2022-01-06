@@ -5,13 +5,10 @@
  * @version 1.4
  * @date 2021-12-07
  * 
- * @copyright Copyright (c) 2022
- * 
  */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 #include "parameters.h"
 #include "loader.h"
 #include "algorithm.h"
@@ -22,9 +19,10 @@
  * Když nějaka funkce má odlíšny od 0 vystup, volá clean_and_exit(), ktery slouží k vyčištění pamětí a vracení exitu. V připadě uspěšneho ukončení 
  * prográmu funkce main vypíše do konzole Max network flow is |x| = <n> kde n je maximalní tok sítě, a vrátí hodnotu 0.
  * 
- * @param argc 
- * @param argv 
- * @return int 
+ * @param argc pocet parametrů z přikazové řadky
+ * @param argv pole parametrů z přikazové řadky
+ * @return int 0 když všecchno je v pořadku; 1 když chybí soubor uzlů; 2 když chybí soubor hran; 3 když chybí source;
+ * 4 když chybí target
  */
 int main(int argc, char *argv[]) {
     int exit, max_flow;
@@ -59,6 +57,7 @@ int main(int argc, char *argv[]) {
     
     max_flow = ford_fulkerson(source_id, target_id);
     if(!max_flow){
+        printf("Max network flow is |x| = %d", max_flow);
         vector_destroy(&nodes);
         return EXIT_FAILURE_NO_FLOW;
     }

@@ -35,7 +35,6 @@ int vector_init(vector_t *v, const size_t item_size, const vec_it_dealloc_t deal
         return 0;
     }
 
-    /* Pro případ, že obsahem vectoru bude řetězec znaků. */
     ((char *)v->data)[0] = 0;
 
     return 1;
@@ -48,14 +47,9 @@ void vector_destroy(vector_t **v){
         return;
     }
 
-    /* 
-        Pokud je nastaven vlastní dealokátor, tak je pole iterpretováno jako pole ukazatelů na dynamicky alokované
-        instance struktur. Nad všemi těmito ukazateli je pak uvedený dealokátor zavolán.
-    */
     if ((*v)->deallocator){
         for (a = 0; a < (*v)->count; ++a){
-            /* Pointerová aritmetika zde funguje, protože kompilátor ví, jaká je velikost typu void *. */
-            ((*v)->deallocator)((void **)((*v)->data) + a); /* Jedná se funkční volání! Trošku maskované, ale ja tam. ;-) */
+           ((*v)->deallocator)((void **)((*v)->data) + a); 
         }
     }
 
@@ -98,7 +92,7 @@ int vector_realloc(vector_t *v, const size_t size){
 }
 
 void *vector_at(const vector_t *v, const size_t at){
-    if (!v || at > v->count - 1){      /* Jinak bychom sáhli za okraj vektoru. */
+    if (!v || at > v->count - 1){  
         return NULL;        
     }
     return (void *)((char *)v->data + (at * v->item_size));
