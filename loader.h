@@ -20,14 +20,16 @@
 #include "parameters.h"
 
 /** @brief Používaný znak k oddělování hodnot v CSV souboru edges. */
-#define EDGE_CSV_DELIMETER ",\"\0"
+#define EDGE_CSV_DELIMETER ",\""
 /** @brief Používaný znak k oddělování hodnot v CSV souboru nodes. */
-#define NODE_CSV_DELIMETER ",\0"
+#define NODE_CSV_DELIMETER "," 
+/** @brief Používaný znak k oddělování hodnot v CSV souboru nodes. */
+#define WKT_CSV_DELIMETER "\"" 
 
 /** @brief Správný format tabulky s hranama */
-#define EDGE_TABLE_FORMAT "id,source,target,capacity,isvalid,WKT\0"
+#define EDGE_TABLE_FORMAT "id,source,target,capacity,isvalid,WKT\n\0"
 /** @brief Správný format tabulky s uzly */
-#define NODE_TABLE_FORMAT "id,WKT\0"
+#define NODE_TABLE_FORMAT "id,WKT\n\0"
 
 /** @brief Návratova hodnota programu v připadě špatného formatu nazvu souboru s uzly */
 #define EXIT_FAILURE_VERTEX 1
@@ -48,9 +50,9 @@
 #define FILE_PATH "../data/\0"
 
 /** @brief Velikost načítacího bufferu pro edge */
-#define EDGE_CHAR_BUFFER_SIZE 4096
+#define EDGE_CHAR_BUFFER_SIZE 8192
 /** @brief Velikost načítacího bufferu pro node */
-#define NODE_CHAR_BUFFER_SIZE 256
+#define NODE_CHAR_BUFFER_SIZE 1024
 
 /** @brief vector_t do kterého budou zapsáne indexy načtených uzlu a hran při načtení pro odstrnění dublicit */
 extern vector_t *indexes;
@@ -88,10 +90,10 @@ int edge_loader(char *path, int is_valid);
 
 /**
  * @brief Funkce slouží pro kontrolu jestli vector s uzly obsahuje index, který byl přidan uživatelém jako zdroj pro
- * vypočet maximalního toku
+ * vypočet maximalního toku. Pokud nebyl nalezen, vypíše chybovou hlášku
  * 
  * @param source index zdroju
- * @return int 
+ * @return int vrací 0 pokud mezí načtené uzly je nalezen zdroj. Vrací 3 pokud zdroj nalezen nebyl
  */
 int source_in_graph(int source);
 
@@ -100,7 +102,7 @@ int source_in_graph(int source);
  * vypočet maximalního toku
  * 
  * @param source index stoku
- * @return int 
+ * @return int int vrací 0 pokud mezí načtené uzly je nalezen zdroj. Vrací 4 pokud zdroj nalezen nebyl
  */
 int target_in_graph(int target);
 

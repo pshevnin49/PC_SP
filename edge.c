@@ -1,20 +1,9 @@
 #include "edge.h"
 
-/**
- * @brief Funkce která tvoří novou hranu. Přijíma parametrý:
- * 
- * @param id index nové hrany
- * @param source index bodu ze kterého hrana vychazí
- * @param target index bodu kterým hrana končí
- * @param capacity propustnost hrany
- * @param is_valid jakou validnost tato hrana má "True" nebo "False"
- * @param wkt Souřadníce kterýma tato hrana prochází
- * @return edge_t* ukazatel na hranu
- */
 edge_t *edge_create(const int id, const int source, const int target, const int capacity, const int is_valid, const char *wkt){
     edge_t *new;
     
-    if (!wkt || strlen(wkt) == 0) {
+    if(!wkt || strlen(wkt) == 0){
         return NULL;
     }
 
@@ -24,7 +13,7 @@ edge_t *edge_create(const int id, const int source, const int target, const int 
     }
 
     new->wkt = (char *)malloc(strlen(wkt) + 1);
-    if (!new->wkt) {
+    if(!new->wkt){
         free(new);
         return NULL;
     }
@@ -40,14 +29,9 @@ edge_t *edge_create(const int id, const int source, const int target, const int 
     return new;
 }
 
-/**
- * @brief Funkce uvolňuje paměť struktury "Edge"
- * 
- * @param poor 
- */
-void edge_destroy(edge_t **poor) {
+void edge_destroy(edge_t **poor){
     
-    if (!poor || !*poor) {
+    if(!poor || !*poor){
         return;
     }
     
@@ -63,13 +47,3 @@ void edge_destroy(edge_t **poor) {
     *poor = NULL;
 }
 
-
-void edge_print(const edge_t *edge) {
-
-    if (!edge) {
-        printf("ERROR empty pointer");
-        return;
-    }
-
-    printf("(%d: %d, %d, %d, %d, %s)\n", edge->id, edge->source, edge->target, edge->capacity, edge->is_valid, edge->wkt);
-}

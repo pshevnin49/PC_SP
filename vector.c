@@ -3,16 +3,16 @@
 vector_t *vector_create(const size_t item_size, const vec_it_dealloc_t deallocator){
     vector_t *v;
 
-    if (item_size == 0){
+    if(item_size == 0){
         return NULL;
     }
 
     v = (vector_t *)malloc(sizeof(vector_t));
-    if (!v){
+    if(!v){
         return NULL;
     }
 
-    if (!vector_init(v, item_size, deallocator)){
+    if(!vector_init(v, item_size, deallocator)){
         free(v);
         return NULL;
     }
@@ -21,7 +21,7 @@ vector_t *vector_create(const size_t item_size, const vec_it_dealloc_t deallocat
 }
 
 int vector_init(vector_t *v, const size_t item_size, const vec_it_dealloc_t deallocator){
-    if (!v || item_size == 0){
+    if(!v || item_size == 0){
         return 0;
     }
 
@@ -31,7 +31,7 @@ int vector_init(vector_t *v, const size_t item_size, const vec_it_dealloc_t deal
     v->data = NULL;
     v->deallocator = deallocator;
 
-    if (!vector_realloc(v, VECTOR_INIT_SIZE)){
+    if(!vector_realloc(v, VECTOR_INIT_SIZE)){
         return 0;
     }
 
@@ -43,17 +43,17 @@ int vector_init(vector_t *v, const size_t item_size, const vec_it_dealloc_t deal
 void vector_destroy(vector_t **v){
     size_t a;
 
-    if (!v || !*v){
+    if(!v || !*v){
         return;
     }
 
-    if ((*v)->deallocator){
-        for (a = 0; a < (*v)->count; ++a){
+    if((*v)->deallocator){
+        for(a = 0; a < (*v)->count; ++a){
            ((*v)->deallocator)((void **)((*v)->data) + a); 
         }
     }
 
-    if ((*v)->data){
+    if((*v)->data){
         free((*v)->data);
     }
 
@@ -64,7 +64,7 @@ void vector_destroy(vector_t **v){
 void *vector_giveup(vector_t *v){
     void *data;
 
-    if (!v || vector_isempty(v)){
+    if(!v || vector_isempty(v)){
         return NULL;
     }
 
@@ -77,12 +77,12 @@ void *vector_giveup(vector_t *v){
 int vector_realloc(vector_t *v, const size_t size){
     void *data_temp;
 
-    if (!v || size <= v->count){
+    if(!v || size <= v->count){
         return 0;
     }
 
     data_temp = realloc(v->data, v->item_size * size);
-    if (!data_temp){
+    if(!data_temp){
         return 0;
     }
 
@@ -92,19 +92,19 @@ int vector_realloc(vector_t *v, const size_t size){
 }
 
 void *vector_at(const vector_t *v, const size_t at){
-    if (!v || at > v->count - 1){  
+    if(!v || at > v->count - 1){  
         return NULL;        
     }
     return (void *)((char *)v->data + (at * v->item_size));
 }
 
 int vector_push_back(vector_t *v, const void *item){
-    if (!v || !item){
+    if(!v || !item){
         return 0;
     }
 
-    if (v->count == v->capacity){
-        if (!vector_realloc(v, v->capacity * VECTOR_SIZE_MULT)){
+    if(v->count == v->capacity){
+        if(!vector_realloc(v, v->capacity * VECTOR_SIZE_MULT)){
             return 0;
         }
     }

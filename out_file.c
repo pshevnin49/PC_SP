@@ -1,4 +1,5 @@
 #include "out_file.h"
+
 /* vystupní soubor */
 FILE *out_file;
 
@@ -22,8 +23,14 @@ int out_write(char *name){
         return EXIT_FAILURE_OUT;
     }
 
+    /*Pokud jmeno souboru out nebylo definovano vrací 0, a program běží dál*/
     if(!strcmp(name, UNDEFINED_PATH)){
         return EXIT_SUCCESS;
+    }
+
+    if(!out_edges){
+        fclose(out_file);
+        return EXIT_FAILURE_UNDEF;
     }
 
     out_file = fopen(name, WRITE);
@@ -32,12 +39,7 @@ int out_write(char *name){
         return EXIT_FAILURE_OUT;
     }
 
-    if(!out_edges){
-        fclose(out_file);
-        return EXIT_FAILURE_UNDEF;
-    }
-
-    fprintf(out_file, "%s\n", EDGE_TABLE_FORMAT);
+    fprintf(out_file, "%s", EDGE_TABLE_FORMAT);
     
     /* Seřázení hran pomocí funkce qsort z knihovny stdlib.h */
     qsort(out_edges->data, out_edges->count, sizeof(edge_t*), comparator);
@@ -48,12 +50,12 @@ int out_write(char *name){
         if(!out_edge){
             return EXIT_FAILURE_UNDEF;
         }
-
+        /*Pokud hrana je validní vrací čáru True pokud ne - False */
         if(out_edge->is_valid){
-            fprintf(out_file, "%d, %d, %d, %d, %s, \"%s\"\n", out_edge->id, out_edge->source, out_edge->target, out_edge->capacity, "True", out_edge->wkt);
+            fprintf(out_file, "%d,%d,%d,%d,%s,\"%s\"\n", out_edge->id, out_edge->source, out_edge->target, out_edge->capacity, "True", out_edge->wkt);
         }
         else{
-            fprintf(out_file, "%d, %d, %d, %d, %s, \"%s\"\n", out_edge->id, out_edge->source, out_edge->target, out_edge->capacity, "False", out_edge->wkt);
+            fprintf(out_file, "%d,%d,%d,%d,%s\"%s\"\n", out_edge->id, out_edge->source, out_edge->target, out_edge->capacity, "False", out_edge->wkt);
         }
     }
 

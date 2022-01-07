@@ -37,9 +37,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "PC_SP::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-PC_SP-Debug-0300d39fc6fb1b8ddc74.json",
-					"name" : "PC_SP",
+					"id" : "flow::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-flow-Debug-724b8bb43ec2e6a968e3.json",
+					"name" : "flow",
 					"projectIndex" : 0
 				}
 			]

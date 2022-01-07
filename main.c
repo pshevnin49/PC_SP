@@ -22,54 +22,68 @@
  * @param argc pocet parametrů z přikazové řadky
  * @param argv pole parametrů z přikazové řadky
  * @return int 0 když všecchno je v pořadku; 1 když chybí soubor uzlů; 2 když chybí soubor hran; 3 když chybí source;
- * 4 když chybí target
+ * 4 když chybí target; 5 kdýž je špatny format vystupního souboru; 6 když neexistuje tok nenulové velíkosti
  */
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]){
     int exit, max_flow;
 
     exit = 0;
-
-    #define clean_and_exit();        \
-        vector_destroy(&nodes);      \
-        return exit;
-
+    
+    #define clean_and_exit_main()   \
+        free(out_edges->data);      \
+        free(out_edges);            \
+        out_edges = NULL;           
+          
+        
     parameters_processing(argc, argv);
 
     exit = node_loader(node_path);
     if(exit){
-        clean_and_exit();
+        vector_destroy(&nodes); 
+        return exit;
     }
     
     exit = edge_loader(edge_path, is_valid);
     if(exit){
-        clean_and_exit();
+        vector_destroy(&nodes); 
+        return exit;
     }
     
     exit = source_in_graph(source_id);
     if(exit){
-        clean_and_exit();
+        vector_destroy(&nodes); 
+        return exit;
     }
     
     exit = target_in_graph(target_id);
     if(exit){
-        clean_and_exit();
+        vector_destroy(&nodes); 
+        return exit;
     }
     
     max_flow = ford_fulkerson(source_id, target_id);
-    if(!max_flow){
-        printf("Max network flow is |x| = %d", max_flow);
+    
+    if(max_flow){
+        exit = out_write(out_path);
+        
+        if(exit){
+            clean_and_exit_main();
+            vector_destroy(&nodes);
+            return exit;
+        }
+
+        printf("Max network flow is |x| = %d.\n", max_flow);
+    }
+    else{
+        printf("Max network flow is |x| = %d.\n", max_flow);
+        clean_and_exit_main();
         vector_destroy(&nodes);
         return EXIT_FAILURE_NO_FLOW;
     }
     
-    exit = out_write(out_path);
-    if(exit){
-       clean_and_exit();
-    }
-    
-    printf("Max network flow is |x| = %d", max_flow);
-
-    #undef clean_and_exit
+    clean_and_exit_main();
     vector_destroy(&nodes);
+    
+    #undef clean_and_exit_main
     return exit;
 }

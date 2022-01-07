@@ -45,9 +45,16 @@ void in_queue(queue_t *q, int x);
  * @brief Odstraňuje ze frontý a vrácí první element
  * 
  * @param q ukazatel
- * @return int element
+ * @return int prxní element fronty
  */
 int from_queue(queue_t *q);
+
+/**
+ * @brief Kontroluje je li fronta prázdna
+ * 
+ * @return int 0 pokud je plna, 1 pokud je prázdna
+ */
+int queue_is_empty(queue_t *q);
 
 /**
  * @brief Uvolní frontu z paměti.

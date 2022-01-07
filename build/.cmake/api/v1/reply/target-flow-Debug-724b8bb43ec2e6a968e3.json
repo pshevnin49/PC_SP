@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "PC_SP.exe"
+			"path" : "flow.exe"
 		},
 		{
-			"path" : "PC_SP.pdb"
+			"path" : "flow.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -57,7 +57,7 @@
 			]
 		}
 	],
-	"id" : "PC_SP::@6890427a1f51a3e7e1df",
+	"id" : "flow::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -77,8 +77,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "PC_SP",
-	"nameOnDisk" : "PC_SP.exe",
+	"name" : "flow",
+	"nameOnDisk" : "flow.exe",
 	"paths" : 
 	{
 		"build" : ".",

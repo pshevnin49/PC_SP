@@ -7,14 +7,16 @@ int edge_format_check(char *edge_format){
     if(!edge_format){
         return 1;
     }
-    return !strcmp(EDGE_TABLE_FORMAT, edge_format);
+    
+    return strcmp(EDGE_TABLE_FORMAT, edge_format);
 }
 
 int node_format_check(char *node_format){
     if(!node_format){
         return 1;
     }
-    return !strcmp(NODE_TABLE_FORMAT, node_format);
+    
+    return strcmp(NODE_TABLE_FORMAT, node_format);
 }
 
 int edge_to_node(edge_t *edge){
@@ -23,23 +25,23 @@ int edge_to_node(edge_t *edge){
     node_t *node_new;
     
     if(!edge){
-        return 1;
+        return EXIT_FAILURE;
     }
     
     if(!nodes){
-        return 1;
+        return EXIT_FAILURE;
     }
     
     source = edge->source;
-   
+    /*prochází všichní uzly, a hledá ten který je začátkem hrany edge*/
     for(a = 0; nodes->count; ++a){
         node_new = *(node_t **)vector_at(nodes, a);
         if(node_new->id == source){
             vector_push_back(node_new->edges, &edge);
-            return 0;
+            return EXIT_SUCCESS;
         } 
     }
-    return 1;
+    return EXIT_FAILURE;
 }
 
 int is_dublicate(int id){
@@ -58,7 +60,7 @@ int is_dublicate(int id){
     return 0;
 }
 
-int node_loader(char *path) {
+int node_loader(char *path){
     char line[NODE_CHAR_BUFFER_SIZE] = { 0 }, *wkt;
     int node_id; 
     char *symbols_arr;
@@ -77,7 +79,7 @@ int node_loader(char *path) {
     }
 
     file = fopen(path, "r");
-    if (!file) {
+    if(!file){
         printf("Invalid vertex file.\n");
         fclose(file); 
         return EXIT_FAILURE_VERTEX;
@@ -86,12 +88,12 @@ int node_loader(char *path) {
     indexes = vector_create(sizeof(int), NULL);
     nodes = vector_create(sizeof(node_t *), (vec_it_dealloc_t)node_destroy);
     
-    if (!indexes) {
+    if(!indexes){
         printf("Indexes vector create ERROR.\n");
         clean_and_exit();
     }
     
-    if (!nodes) {
+    if(!nodes){
         printf("Nodes vector create ERROR.\n");
         clean_and_exit();
     }
@@ -102,8 +104,8 @@ int node_loader(char *path) {
         clean_and_exit();
     }
    
-    while (fgets(line, NODE_CHAR_BUFFER_SIZE, file)) {
-        if (strlen(line) <= 1) {
+    while (fgets(line, NODE_CHAR_BUFFER_SIZE, file)){
+        if(strlen(line) <= 1){
             continue;
         }
         symbols_arr = strtok(line, NODE_CSV_DELIMETER);
@@ -113,7 +115,7 @@ int node_loader(char *path) {
             continue;
         }
 
-        wkt = strtok(NULL, NODE_CSV_DELIMETER);
+        wkt = strtok(NULL, WKT_CSV_DELIMETER);
 
         node = node_create(node_id, wkt);
         if(!node){ 
@@ -131,17 +133,15 @@ int node_loader(char *path) {
     return EXIT_SUCCESS;
 }
 
-int edge_loader(char *path, int is_valid) {
+int edge_loader(char *path, int is_valid){
     char line[EDGE_CHAR_BUFFER_SIZE] = { 0 }, *wkt;
     int edge_id, edge_src, edge_target, edge_capacity, edge_valid;
     char *symbols_arr;
     FILE *file = NULL;
-    vector_t *edges;
     edge_t *edge;
 
     #define clean_and_exit()        \
         vector_destroy(&indexes);   \
-        vector_destroy(&edges);     \
         fclose(file);               \
         return EXIT_FAILURE_EDGE;
 
@@ -151,36 +151,30 @@ int edge_loader(char *path, int is_valid) {
     }
     
     file = fopen(path, "r");
-    if (!file) {
+    if(!file){
         printf("Invalid edge file.\n");
         fclose(file);
         return EXIT_FAILURE_EDGE;
     }
     
     indexes = vector_create(sizeof(int), NULL);
-    edges = vector_create(sizeof(edge_t *), (vec_it_dealloc_t)edge_destroy);
     
-    if (!indexes) {
+    if(!indexes){
         printf("Indexes vector create ERROR.\n");
-        clean_and_exit();
-    }
-
-    if(!edges) {
-        printf("Edges vector create ERROR.\n");
         clean_and_exit();
     }
 
     fgets(line, EDGE_CHAR_BUFFER_SIZE, file);
 
-    /*Kontorola formatu vstupni tabulky*/
+    /*Kontorola formatu vstupní tabulky hran*/
     if(edge_format_check(line)){
         printf("Invalid edge file.\n");
         clean_and_exit();
     }
 
-    while(fgets(line, EDGE_CHAR_BUFFER_SIZE, file)) {
+    while(fgets(line, EDGE_CHAR_BUFFER_SIZE, file)){
         
-        if(strlen(line) <= 1) {
+        if(strlen(line) <= 1){
             continue;
         }
 
@@ -214,7 +208,7 @@ int edge_loader(char *path, int is_valid) {
             }
         }
         
-        wkt = strtok(NULL, EDGE_CSV_DELIMETER);
+        wkt = strtok(NULL, WKT_CSV_DELIMETER);
         wkt[strcspn(wkt, "\r\n")] = 0;
         edge = edge_create(edge_id, edge_src, edge_target, edge_capacity, edge_valid, wkt);
 
@@ -228,6 +222,7 @@ int edge_loader(char *path, int is_valid) {
     }
 
     vector_destroy(&indexes);
+    fclose(file);
     #undef clean_and_exit
     return EXIT_SUCCESS;
 }
@@ -237,9 +232,10 @@ int source_in_graph(int source){
     
     for(a = 0; a < nodes->count; ++a){
         if((*(node_t **)vector_at(nodes, a))->id == source){
-            return 0;
+            return EXIT_SUCCESS;
         }
     }
+    
     printf("Invalid source vertex.\n");
     return EXIT_FAILURE_SOURCE;
 }
@@ -249,13 +245,12 @@ int target_in_graph(int target){
     
     for(a = 0; a < nodes->count; ++a){
         if((*(node_t **)vector_at(nodes, a))->id == target){
-            return 0;
+            return EXIT_SUCCESS;
         }
     }
 
     printf("Invalid sink vertex.\n");
     return EXIT_FAILURE_TARGET;
-
 }
 
 

@@ -7,7 +7,7 @@ BIN = flow.exe
 
 all: clean $(BIN)
 
-$(BIN): vector.o edge.o node.o queue.o bfs.o algorithm.o out_file.o loader.o parameters.o main.o
+$(BIN): vector.o edge.o node.o queue.o bfs.o algorithm.o out_file.o parameters.o loader.o main.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 vector.o: vector.c
@@ -31,14 +31,14 @@ algorithm.o: algorithm.c
 out_file.o: out_file.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-loader.o: loader.c
+parameters.o: parameters.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-parameters.o: parameters.c
+loader.o: loader.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 main.o: main.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:
-	rm -rf *.o
+	del /F /Q *.o  

@@ -3,7 +3,7 @@
 node_t *node_create(const int id, const char *wkt){
     node_t *new;
     
-    if (!wkt || strlen(wkt) == 0){
+    if(!wkt || strlen(wkt) == 0){
         return NULL;
     }
 

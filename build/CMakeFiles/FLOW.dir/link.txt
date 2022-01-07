@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\flow.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\ar.exe cr CMakeFiles\flow.dir/objects.a @CMakeFiles\flow.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\X8EAA8~1.EXE -Wall -Wextra -pedantic -ansi -g -g -Wl,--whole-archive CMakeFiles\flow.dir/objects.a -Wl,--no-whole-archive -o flow.exe -Wl,--out-implib,libflow.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\flow.dir\linklibs.rsp

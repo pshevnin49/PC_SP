@@ -32,12 +32,10 @@
 #define EXTENSION_LEN 4
 /** @brief správný format CSV souboru*/
 #define CORRECT_EXTENSION ".csv\0"
-/** @brief cesta složký ze soubory*/
-#define DIRECTORY_PATH "data/\0"
 /** @brief nedefinovaná cesta*/
 #define UNDEFINED_PATH "undefined\0"
 /** @brief maximalní počet symbolů jmena souboru*/
-#define FILENAME_LEN 32
+#define FILENAME_LEN 256
 
 /** @brief cesta do vystupního souboru*/
 extern char out_path[];

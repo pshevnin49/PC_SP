@@ -18,6 +18,7 @@ int format_check(char *name){
     if(!name){
         return 1;
     }
+    
     /* Bereme 4 poslední symboly názvu a koukamé, aby se rovnali .csv*/
     name_len = strlen(name);
     strcpy(extension, &name[name_len - EXTENSION_LEN]);
@@ -33,44 +34,42 @@ int parameters_processing(int argc, char *argv[]){
     int a;
     
     if(argc <= 1 || !argv){
-        return EXIT_FAILURE_UNDEF;
+        return EXIT_FAILURE_VERTEX;
     }
 
-    /* Procházím všichní parametry*/
+    /* Prochází všichní parametry a porovnáva s parametrý, ktere jsou v zadání*/
     for(a = 1; a < argc; ++a){
-        if(strcmp (VERTEX_PARAMETER, argv[a]) == 0 && (a + 1 < argc)){
+        if(strcmp(VERTEX_PARAMETER, argv[a]) == 0 && (a + 1 < argc)){
             if((!format_check(argv[a + 1])) && strcmp (UNDEFINED_PATH, node_path) == 0){
-                strcpy(node_path, DIRECTORY_PATH);
-                strcat(node_path, argv[a + 1]);
+                strcpy(node_path, argv[a + 1]);
             }
         }
         
-        else if(strcmp (EDGE_PARAMETER, argv[a]) == 0 && (a + 1 <= argc)){ 
+        else if(strcmp(EDGE_PARAMETER, argv[a]) == 0 && (a + 1 <= argc)){ 
             if((!format_check(argv[a + 1])) && strcmp (UNDEFINED_PATH, edge_path) == 0){
-                strcpy(edge_path, DIRECTORY_PATH);
-                strcat(edge_path, argv[a + 1]);
+               strcpy(edge_path, argv[a + 1]);
             }
         }
-        
-        else if(strcmp (OUT_PARAMETER, argv[a]) == 0 && (a + 1 <= argc)){ 
+        /*Pokud parameter out nebyl nalezen, necháva ho "undefined", pokud byl nalezén ale má špatný format
+        vyplní řádek prazdním řádkem*/
+        else if(strcmp(OUT_PARAMETER, argv[a]) == 0 && (a + 1 <= argc)){ 
             if(!format_check(argv[a + 1])){
-                strcpy(out_path, DIRECTORY_PATH);
-                strcat(out_path, argv[a + 1]);
+                strcpy(out_path, argv[a + 1]);
             }
             else{
                 strcpy(out_path, "");
             }
         }
         
-        else if(strcmp (TARGET_PARAMETER, argv[a]) == 0 && (a + 1 <= argc)){ 
+        else if(strcmp(TARGET_PARAMETER, argv[a]) == 0 && (a + 1 <= argc)){ 
             target_id = atoi(argv[a + 1]);
         }
         
-        else if(strcmp (SOURCE_PARAMETER, argv[a]) == 0 && (a + 1 <= argc)){ 
+        else if(strcmp(SOURCE_PARAMETER, argv[a]) == 0 && (a + 1 <= argc)){ 
             source_id = atoi(argv[a + 1]);
         }
-        
-        else if(strcmp (IS_VALID_PARAMETER, argv[a]) == 0){
+        /*Kontroluje valídnost sítě*/
+        else if(strcmp(IS_VALID_PARAMETER, argv[a]) == 0){
             is_valid = 1;
         }
       }

@@ -64,16 +64,6 @@ CMAKE_BINARY_DIR = C:\Users\pshev\git\PC_SP\build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -83,6 +73,16 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named PC_SP
+# Target rules for targets named flow
 
 # Build rule for target.
-PC_SP: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 PC_SP
-.PHONY : PC_SP
+flow: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 flow
+.PHONY : flow
 
 # fast build rule for target.
-PC_SP/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/build
-.PHONY : PC_SP/fast
+flow/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/build
+.PHONY : flow/fast
 
 algorithm.obj: algorithm.c.obj
 .PHONY : algorithm.obj
 
 # target to build an object file
 algorithm.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/algorithm.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/algorithm.c.obj
 .PHONY : algorithm.c.obj
 
 algorithm.i: algorithm.c.i
@@ -141,7 +141,7 @@ algorithm.i: algorithm.c.i
 
 # target to preprocess a source file
 algorithm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/algorithm.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/algorithm.c.i
 .PHONY : algorithm.c.i
 
 algorithm.s: algorithm.c.s
@@ -149,7 +149,7 @@ algorithm.s: algorithm.c.s
 
 # target to generate assembly for a file
 algorithm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/algorithm.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/algorithm.c.s
 .PHONY : algorithm.c.s
 
 bfs.obj: bfs.c.obj
@@ -157,7 +157,7 @@ bfs.obj: bfs.c.obj
 
 # target to build an object file
 bfs.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/bfs.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/bfs.c.obj
 .PHONY : bfs.c.obj
 
 bfs.i: bfs.c.i
@@ -165,7 +165,7 @@ bfs.i: bfs.c.i
 
 # target to preprocess a source file
 bfs.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/bfs.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/bfs.c.i
 .PHONY : bfs.c.i
 
 bfs.s: bfs.c.s
@@ -173,7 +173,7 @@ bfs.s: bfs.c.s
 
 # target to generate assembly for a file
 bfs.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/bfs.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/bfs.c.s
 .PHONY : bfs.c.s
 
 edge.obj: edge.c.obj
@@ -181,7 +181,7 @@ edge.obj: edge.c.obj
 
 # target to build an object file
 edge.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/edge.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/edge.c.obj
 .PHONY : edge.c.obj
 
 edge.i: edge.c.i
@@ -189,7 +189,7 @@ edge.i: edge.c.i
 
 # target to preprocess a source file
 edge.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/edge.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/edge.c.i
 .PHONY : edge.c.i
 
 edge.s: edge.c.s
@@ -197,7 +197,7 @@ edge.s: edge.c.s
 
 # target to generate assembly for a file
 edge.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/edge.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/edge.c.s
 .PHONY : edge.c.s
 
 loader.obj: loader.c.obj
@@ -205,7 +205,7 @@ loader.obj: loader.c.obj
 
 # target to build an object file
 loader.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/loader.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/loader.c.obj
 .PHONY : loader.c.obj
 
 loader.i: loader.c.i
@@ -213,7 +213,7 @@ loader.i: loader.c.i
 
 # target to preprocess a source file
 loader.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/loader.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/loader.c.i
 .PHONY : loader.c.i
 
 loader.s: loader.c.s
@@ -221,7 +221,7 @@ loader.s: loader.c.s
 
 # target to generate assembly for a file
 loader.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/loader.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/loader.c.s
 .PHONY : loader.c.s
 
 main.obj: main.c.obj
@@ -229,7 +229,7 @@ main.obj: main.c.obj
 
 # target to build an object file
 main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -237,7 +237,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -245,7 +245,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/main.c.s
 .PHONY : main.c.s
 
 node.obj: node.c.obj
@@ -253,7 +253,7 @@ node.obj: node.c.obj
 
 # target to build an object file
 node.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/node.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/node.c.obj
 .PHONY : node.c.obj
 
 node.i: node.c.i
@@ -261,7 +261,7 @@ node.i: node.c.i
 
 # target to preprocess a source file
 node.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/node.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/node.c.i
 .PHONY : node.c.i
 
 node.s: node.c.s
@@ -269,7 +269,7 @@ node.s: node.c.s
 
 # target to generate assembly for a file
 node.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/node.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/node.c.s
 .PHONY : node.c.s
 
 out_file.obj: out_file.c.obj
@@ -277,7 +277,7 @@ out_file.obj: out_file.c.obj
 
 # target to build an object file
 out_file.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/out_file.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/out_file.c.obj
 .PHONY : out_file.c.obj
 
 out_file.i: out_file.c.i
@@ -285,7 +285,7 @@ out_file.i: out_file.c.i
 
 # target to preprocess a source file
 out_file.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/out_file.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/out_file.c.i
 .PHONY : out_file.c.i
 
 out_file.s: out_file.c.s
@@ -293,7 +293,7 @@ out_file.s: out_file.c.s
 
 # target to generate assembly for a file
 out_file.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/out_file.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/out_file.c.s
 .PHONY : out_file.c.s
 
 parameters.obj: parameters.c.obj
@@ -301,7 +301,7 @@ parameters.obj: parameters.c.obj
 
 # target to build an object file
 parameters.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/parameters.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/parameters.c.obj
 .PHONY : parameters.c.obj
 
 parameters.i: parameters.c.i
@@ -309,7 +309,7 @@ parameters.i: parameters.c.i
 
 # target to preprocess a source file
 parameters.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/parameters.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/parameters.c.i
 .PHONY : parameters.c.i
 
 parameters.s: parameters.c.s
@@ -317,7 +317,7 @@ parameters.s: parameters.c.s
 
 # target to generate assembly for a file
 parameters.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/parameters.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/parameters.c.s
 .PHONY : parameters.c.s
 
 queue.obj: queue.c.obj
@@ -325,7 +325,7 @@ queue.obj: queue.c.obj
 
 # target to build an object file
 queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/queue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/queue.c.obj
 .PHONY : queue.c.obj
 
 queue.i: queue.c.i
@@ -333,7 +333,7 @@ queue.i: queue.c.i
 
 # target to preprocess a source file
 queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/queue.c.i
 .PHONY : queue.c.i
 
 queue.s: queue.c.s
@@ -341,7 +341,7 @@ queue.s: queue.c.s
 
 # target to generate assembly for a file
 queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/queue.c.s
 .PHONY : queue.c.s
 
 vector.obj: vector.c.obj
@@ -349,7 +349,7 @@ vector.obj: vector.c.obj
 
 # target to build an object file
 vector.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/vector.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/vector.c.obj
 .PHONY : vector.c.obj
 
 vector.i: vector.c.i
@@ -357,7 +357,7 @@ vector.i: vector.c.i
 
 # target to preprocess a source file
 vector.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/vector.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/vector.c.i
 .PHONY : vector.c.i
 
 vector.s: vector.c.s
@@ -365,7 +365,7 @@ vector.s: vector.c.s
 
 # target to generate assembly for a file
 vector.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PC_SP.dir\build.make CMakeFiles/PC_SP.dir/vector.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flow.dir\build.make CMakeFiles/flow.dir/vector.c.s
 .PHONY : vector.c.s
 
 # Help Target
@@ -376,7 +376,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... PC_SP
+	@echo ... flow
 	@echo ... algorithm.obj
 	@echo ... algorithm.i
 	@echo ... algorithm.s

@@ -18,6 +18,7 @@
 #include "loader.h"
 #include "algorithm.h"
 #include "parameters.h"
+
 /** @brief Definice pro vypis pri vytvaření nového FILE */
 #define WRITE "w"
 
@@ -26,7 +27,8 @@
  * a do tohoto souboru zapisuje hlavičku pro hrany (id,source,target,capacity,isvalid,WKT) a všichní hrany minimalního řezu seřazené podle id. 
  * 
  * @param name jmeno vystupního .csv souboru.
- * @return int 
+ * @return int vrácí 0 v případě uspěšné generace out souboru, vrací 5 pokud dojde k chybě při generace 
+ * souboru, nebo když jmeno souboru bude prázdné
  */
 int out_write(char *name);
 

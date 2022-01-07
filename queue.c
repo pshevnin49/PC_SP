@@ -4,11 +4,11 @@ queue_t *queue_create(){
     queue_t *q;
     
     q = (queue_t *)malloc(sizeof(queue_t));
-    if (!q){
+    if(!q){
         return NULL;
     }
 
-    if (!queue_init(q)){
+    if(!queue_init(q)){
         free(q);
         return NULL;
     }
@@ -34,16 +34,24 @@ void in_queue(queue_t *q, int x){
 }
 
 int from_queue(queue_t *q){
-    int x;
-    if(q->begin == q->end){
+    int item;
+
+    if(queue_is_empty(q)){
         return -1;
     }
 
-    x = *(int *)vector_at(q->queue, q->begin);
+    item = *(int *)vector_at(q->queue, q->begin);
     q->begin++;
-    return x;
+    return item;
 }
 
+int queue_is_empty(queue_t *q){
+    if(q->begin == q->end){
+        return 1;
+    }else{
+        return 0;
+    }
+}
 
 void queue_destroy(queue_t **poor){
     if(!poor || !*poor){

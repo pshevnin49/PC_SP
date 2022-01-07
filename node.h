@@ -19,13 +19,13 @@
  * @brief Struktura _node
  * Přestavuje jeden uzel grafu, každy uzel obsahuje vector_t s hranama, které z tohoto uzlu vychází 
  */
-typedef struct _node {
+typedef struct _node{
     int id; /** Index uzlu*/
     int color; /** Stav uzlu (WHITE, GREY, BLACK) slouží k označení uzlu při použití BFS algoritmu */
     int pred; /** Předchozí uzel při hledání cesty algoritmem BFS */
     char *wkt; /** Souřadníce uzlu z .csv souboru */
     vector_t *edges; /** vector_t obsahujicí hrany, které z tohoto uzlu vychazí*/
-} node_t;
+}node_t;
 
 /**
  * @brief Alokuje paměť pro uzel, a vkladá jeho index a WKT
